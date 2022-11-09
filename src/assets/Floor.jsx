@@ -15,8 +15,8 @@ export default function Floor(){
     return (
         <>
         <mesh rotation={[-0.5*Math.PI,0,0]}>
-            <planeBufferGeometry attach="geometry" args={[25, 15]}  />
-            <meshPhongMaterial attach="material" color="black" />
+            <planeBufferGeometry attach="geometry" args={[50, 50]}  />
+            <meshPhongMaterial attach="material" color={0x393E46} />
          </mesh>
         </>
     )

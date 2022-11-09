@@ -19,7 +19,7 @@ function App() {
     <Canvas>
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
-      <PerspectiveCamera makeDefault fov={75} position={[0,1,5]}/>
+      <PerspectiveCamera makeDefault fov={75} position={[0,5,10]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
       <Planes/>
