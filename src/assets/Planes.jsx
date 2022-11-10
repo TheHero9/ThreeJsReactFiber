@@ -22,11 +22,11 @@ export default function Planes(){
       <Plane coords={{x:0, y:2.5, z:-5}} rotation={[0,0,0]}/>
       <Plane coords={{x:0, y:2.5, z:9}} rotation={[0,0,0]}/> */}
 
-      <Plane coords={{x:-5, y:0.1, z:-20}} rotation={[-0.5*Math.PI,0,0]}/>
-      <Plane coords={{x:20, y:0.1, z:-10}} rotation={[-0.5*Math.PI,0,0]}/>
-      <Plane coords={{x:19, y:0.1, z:20}} rotation={[-0.5*Math.PI,0,0]}/>
-      <Plane coords={{x:3, y:0.1, z:19}} rotation={[-0.5*Math.PI,0,0]}/>
-      <Plane coords={{x:-15, y:0.1, z:19}} rotation={[-0.5*Math.PI,0,0]}/>
+      <Plane coords={{x:-5, y:0.1, z:-15}} rotation={[-0.5*Math.PI,0,0]}/>
+      <Plane coords={{x:15, y:0.1, z:-10}} rotation={[-0.5*Math.PI,0,0]}/>
+      <Plane coords={{x:15, y:0.1, z:15}} rotation={[-0.5*Math.PI,0,0]}/>
+      <Plane coords={{x:3, y:0.1, z:14}} rotation={[-0.5*Math.PI,0,0]}/>
+      <Plane coords={{x:-15, y:0.1, z:14}} rotation={[-0.5*Math.PI,0,0]}/>
 
       
         </>
