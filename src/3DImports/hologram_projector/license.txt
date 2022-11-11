@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hologram Projector
+* source:	https://sketchfab.com/3d-models/hologram-projector-905823a25aa1457ba4087c09b0f312aa
+* author:	dasnymth (https://sketchfab.com/dasnymth)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hologram Projector" (https://sketchfab.com/3d-models/hologram-projector-905823a25aa1457ba4087c09b0f312aa) by dasnymth (https://sketchfab.com/dasnymth) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

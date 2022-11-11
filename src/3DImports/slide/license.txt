@@ -1,0 +1,11 @@
+Model Information:
+* title:	Slide
+* source:	https://sketchfab.com/3d-models/slide-bfccc771e7fe42559e5742701ae9a908
+* author:	ashley.carboon (https://sketchfab.com/ashley.carboon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Slide" (https://sketchfab.com/3d-models/slide-bfccc771e7fe42559e5742701ae9a908) by ashley.carboon (https://sketchfab.com/ashley.carboon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

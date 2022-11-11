@@ -1,0 +1,11 @@
+Model Information:
+* title:	Realtime Grass
+* source:	https://sketchfab.com/3d-models/realtime-grass-07d38555cae844f7abdeace9d19c4777
+* author:	mfhscoobydoo (https://sketchfab.com/mfhscoobydoo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Realtime Grass" (https://sketchfab.com/3d-models/realtime-grass-07d38555cae844f7abdeace9d19c4777) by mfhscoobydoo (https://sketchfab.com/mfhscoobydoo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

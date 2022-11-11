@@ -19,9 +19,9 @@ export default function Floor(){
             <meshPhongMaterial attach="material" color={0x393E46} />
          </mesh>
         
-         <RoundedBox args={[30,2,30]} radius={0} smoothness={1} position={[0,0,0]}>
+         {/* <RoundedBox args={[30,2,30]} radius={0} smoothness={1} position={[0,0,0]}>
             <meshPhongMaterial color="blue" wireframe/>
-        </RoundedBox>
+        </RoundedBox> */}
         </>
     )
 }
