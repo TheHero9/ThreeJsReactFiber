@@ -5,6 +5,8 @@ import {Text} from '@react-three/drei';
 function TextMaker(props){
     return(
       <Text fontSize={props.fontSize} 
+            fontWeight={props.fontWeight} 
+            rotation={props.rotation}
             position={[props.coords.x,props.coords.y,props.coords.z]}
             color={props.color} characters="abcdefghijklmnopqrstuvwxyz0123456789!">
                 {props.message}
@@ -23,7 +25,7 @@ function TextMaker(props){
 function TextProjectsSection(){
   return(
       <>
-       <TextMaker color={"white"} fontSize={0.1} coords={{x:-5.35, y:0.85, z:-7}} message={"Projects Section"}/>
+       <TextMaker color={"white"} fontSize={0.1} rotation={[0,0.3,0]} coords={{x:-5.0, y:2.00, z:-1.75}} message={"Projects Section"}/>
       </>
   )
 }

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized  rock
+* source:	https://sketchfab.com/3d-models/stylized-rock-47f2a1d475684327a4b9447772690cde
+* author:	skinny hands (https://sketchfab.com/skinnyhands)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized  rock" (https://sketchfab.com/3d-models/stylized-rock-47f2a1d475684327a4b9447772690cde) by skinny hands (https://sketchfab.com/skinnyhands) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
