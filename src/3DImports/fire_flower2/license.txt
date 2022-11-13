@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fire Flower (Super Mario Bros)
+* source:	https://sketchfab.com/3d-models/fire-flower-super-mario-bros-1465bc069efa437b999669c6db5a01ee
+* author:	Anthony Yanez (https://sketchfab.com/paulyanez)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fire Flower (Super Mario Bros)" (https://sketchfab.com/3d-models/fire-flower-super-mario-bros-1465bc069efa437b999669c6db5a01ee) by Anthony Yanez (https://sketchfab.com/paulyanez) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

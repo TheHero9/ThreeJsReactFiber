@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ground With Grass Reduced Area
+* source:	https://sketchfab.com/3d-models/ground-with-grass-reduced-area-f1dbf0dc644c49fd903d2d3fddc10183
+* author:	chloebowman (https://sketchfab.com/chloebowman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ground With Grass Reduced Area" (https://sketchfab.com/3d-models/ground-with-grass-reduced-area-f1dbf0dc644c49fd903d2d3fddc10183) by chloebowman (https://sketchfab.com/chloebowman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

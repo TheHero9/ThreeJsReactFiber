@@ -1,0 +1,11 @@
+Model Information:
+* title:	Piranha Plant (Super Mario Bros)
+* source:	https://sketchfab.com/3d-models/piranha-plant-super-mario-bros-e406e98563f84e1dad26e896d409a892
+* author:	Anthony Yanez (https://sketchfab.com/paulyanez)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Piranha Plant (Super Mario Bros)" (https://sketchfab.com/3d-models/piranha-plant-super-mario-bros-e406e98563f84e1dad26e896d409a892) by Anthony Yanez (https://sketchfab.com/paulyanez) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

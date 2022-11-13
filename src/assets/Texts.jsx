@@ -25,7 +25,7 @@ function TextMaker(props){
 function TextProjectsSection(){
   return(
       <>
-       <TextMaker color={"white"} fontSize={0.2} rotation={[0,0.4,0]} coords={{x:-5.0, y:2.00, z:-1.75}} message={"Projects Section"}/>
+       <TextMaker color={"white"} fontSize={0.2} rotation={[0,0.4,0]} coords={{x:-5.0, y:2.29, z:-1.95}} message={"Projects Section"}/>
       </>
   )
 }
