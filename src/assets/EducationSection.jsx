@@ -4,6 +4,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
 import { useState } from "react";
 
+import { TextEducationSection, TextMaker } from "./Texts";
+
+
 export default function EducationSection(){
       let lake= useLoader(
         GLTFLoader, "src/3DImports/calm_lake/scene.gltf"
@@ -54,6 +57,9 @@ export default function EducationSection(){
         // mario.scale.set()
       }, []);
       
+    
+    const [clicked, setClicked] = useState(false)
+    
     return(
      <>
 
@@ -73,10 +79,18 @@ export default function EducationSection(){
       <primitive object={mario} rotation={[0, 0, 0]} position={[9.17, 0.2, -2.3]} />
 
       {/*Pillar*/}
-      <primitive object={projectorGeo2} rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]} />
+      <primitive object={projectorGeo2}  
+          onClick={(e)=> {
+            setClicked(!clicked)
 
-      
+          }} 
+          
+          rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]} />
+
+      {/* <TextEducationSection/> */}
+      <TextMaker  scale={[1,1,1]}  fillOpacity={clicked ? 1 : 0} color={"red"} fontSize={0.2} rotation={[0,0,0]} coords={{x:5.35, y:3.81, z:-2.6}} message={"Projects Section"}/>
 
      </>
     )
 }
+

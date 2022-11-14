@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState } from "react";
 
 
-import { TextProjectsSection } from "./Texts";
+import { TextMaker} from "./Texts";
 
 
 export default function ProjectsSection(){
@@ -64,6 +64,11 @@ export default function ProjectsSection(){
         grass.scale.set(0.22, 0.09, 0.177)
       });
       
+
+      //Project text
+      const [clicked, setClicked] = useState(false)
+
+
     return(
      <>
 
@@ -89,20 +94,17 @@ export default function ProjectsSection(){
       <primitive object={shiba} rotation={[0.3,0,0]} position={[-9.5,2.3,-3.2]} />
 
       {/* Projector */}
-      <primitive object={projectorGeo} rotation={[0,0.3,0]} position={[-5.15,1.61,-2.0]} />
-        
+      <primitive 
+          onClick={(e)=> {
+            setClicked(!clicked)
+          }} 
 
+          object={projectorGeo} 
+          rotation={[0,0.3,0]} 
+          position={[-5.15,1.61,-2.0]} />
         
-        <Billboard
-        follow={false}
-        lockX={true}
-        lockY={false}
-        lockZ={true}>
-            {/* <RoundedBox args={[0.9,0.7,0.5]} radius={0} rotation={[0,0.3,0]} smoothness={1} position={[-5.1,1.76,-2]}>
-            <meshPhongMaterial color="blue"/>
-            </RoundedBox> */}
-            <TextProjectsSection/>
-        </Billboard> 
+        <TextMaker  color={"red"}  fillOpacity={clicked ? 1 : 0} fontSize={0.2} rotation={[0,0.4,0]} coords={{x:-5.0, y:2.29, z:-1.95}} message={"Projects Section"}/>
+        
      </>
     )
 }

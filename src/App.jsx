@@ -35,7 +35,7 @@ function App() {
       ]}> */}
 
 
-      {/* <Suspense fallback={<Loader/>}> */}
+      <Suspense fallback={<Loader/>}>
         
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
@@ -45,7 +45,7 @@ function App() {
       <Planes/>
       {/* <Car/> */}
       <Texts/>
-      
+      {/* <Text className="hide" depthOffset={20}  fillOpacity={1} position={[0,5,0]}>Hello</Text> */}
 
       <Floor/>
       {/* <Decorations/> */}
@@ -60,9 +60,9 @@ function App() {
       <Stars/>
       <OrbitControls/>
 
-      {/* <pointLight position={[1,1,1]}/> */}
+      <pointLight position={[7,0,-7]}/>
       </Physics>
-      {/* </Suspense> */}
+      </Suspense>
 
       {/* </KeyboardControls> */}
     </Canvas>

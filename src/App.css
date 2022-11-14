@@ -9,5 +9,15 @@ html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+    color: red;
 }
 
+.hide{
+    /* visibility: hidden; */
+    color: blue !important;
+    font-size: 6rem ;
+}
+
+.show{
+    visibility: none;
+}
