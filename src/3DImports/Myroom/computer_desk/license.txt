@@ -1,0 +1,11 @@
+Model Information:
+* title:	Computer Desk
+* source:	https://sketchfab.com/3d-models/computer-desk-05353724b7884bfb81211c7033a57fd4
+* author:	felixawani (https://sketchfab.com/felixawani)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Computer Desk" (https://sketchfab.com/3d-models/computer-desk-05353724b7884bfb81211c7033a57fd4) by felixawani (https://sketchfab.com/felixawani) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
