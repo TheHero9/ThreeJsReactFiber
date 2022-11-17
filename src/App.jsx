@@ -19,6 +19,7 @@ import Loader from './assets/Loader';
 import ProjectsSection from './assets/ProjectsSection';
 import EducationSection from './assets/EducationSection';
 import Roads from './assets/Roads';
+import MyRoomSection from './assets/MyRoomSection';
 // import Decorations from './assets/Decorations';
 
 
@@ -39,7 +40,7 @@ function App() {
         
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
-      <PerspectiveCamera makeDefault fov={40} position={[0,1,5]}/>
+      <PerspectiveCamera makeDefault fov={40} position={[0,5,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
       <Planes/>
@@ -53,6 +54,7 @@ function App() {
 
       <EducationSection/>
       <ProjectsSection/>
+      <MyRoomSection/>
 
       <Roads/>
 
