@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import { useLoader } from '@react-three/fiber';
 import { Plane } from '@react-three/drei';
 import * as THREE from "three"
+import { TextureLoader } from 'three';
 
+// import {wall} from "src/assets/wallTexture.jpg"
+import wall from "./wallTexture.jpg"
 
 export default function MyRoomSection(){
 
@@ -31,6 +34,10 @@ export default function MyRoomSection(){
         GLTFLoader, "src/3DImports/Myroom/computer_desk/scene.gltf"
       ).scene
 
+    let tiles= useLoader(
+        GLTFLoader, "src/3DImports/Myroom/tiles/scene.gltf"
+    ).scene
+
     let laptop= useLoader(
         GLTFLoader, "src/3DImports/Myroom/laptop/scene.gltf"
     ).scene
@@ -47,13 +54,15 @@ export default function MyRoomSection(){
         GLTFLoader, "src/3DImports/Myroom/shelf/scene.gltf"
     ).scene
 
-    
+    const textureWall1= useLoader(TextureLoader, wall)
+    const textureWall2= useLoader(TextureLoader, wall)
 
     useEffect(() => {
         computer_desk.scale.set(1.4, 1.4, 1.4)
         laptop.scale.set(0.10, 0.10, 0.10)
         mousepad.scale.set(1.3, 1.1, 1.3)
         office_chair.scale.set(0.06, 0.06, 0.06)
+        tiles.scale.set(0.1, 0.05, 0.032)
         shelf.scale.set(5, 5, 5)
 
         shelf1.scale.set(3, 3, 3)
@@ -79,25 +88,28 @@ export default function MyRoomSection(){
     <primitive object={shelf} rotation={[0, -1*Math.PI, 0]} position={[-5.4, -0.1, 14]} />
 
     {/*Wooden Shelf*/}
-    <primitive object={shelf1} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 6.5, 14]} />
+    <primitive object={shelf1} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 6.5, 14.25]} />
 
     {/*Wooden Shelf*/}
-    <primitive object={shelf2} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 8.4, 14]} />
+    <primitive object={shelf2} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 8.4, 14.25]} />
 
     {/*Wooden Shelf*/}
-    <primitive object={shelf3} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 10.3, 14]} />
+    <primitive object={shelf3} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 10.3, 14.25]} />
+
+    {/*Tiles*/}
+    <primitive object={tiles} rotation={[0, -1*Math.PI, 0]} position={[-10, 0.3, 10.2]} />
 
 
 
 
-    <mesh position={[-8.5,5,15]} rotation={[0,0,0]} >
+    <mesh position={[-8.5,5,15.01]} rotation={[0,0,0]} >
         <planeBufferGeometry attach="geometry" args ={[13,15]}/>
-        <meshLambertMaterial attach="material" color={0x5DA7DB} side={THREE.DoubleSide}/>
+        <meshLambertMaterial attach="material" map={textureWall1} color={"aqua"} side={THREE.DoubleSide}/>
       </mesh>
 
-      <mesh position={[-15, 5, 10.5]} rotation={[0,-0.5*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[9,10]}/>
-        <meshLambertMaterial attach="material" color="aqua" side={THREE.DoubleSide}/>
+      <mesh position={[-15, 5, 10.7]} rotation={[0,-0.5*Math.PI,0]} >
+        <planeBufferGeometry attach="geometry" args ={[10,15]}/>
+        <meshLambertMaterial attach="material" map={textureWall1} color="aqua" side={THREE.DoubleSide}/>
       </mesh>
         </>
     )
