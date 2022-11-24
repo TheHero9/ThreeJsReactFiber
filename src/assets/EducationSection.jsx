@@ -1,10 +1,11 @@
-import { Billboard, RoundedBox} from "@react-three/drei";
-import { useLoader} from '@react-three/fiber'
+import { Billboard, RoundedBox, Text3D} from "@react-three/drei";
+import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
 import { useState } from "react";
 
 import { TextEducationSection, TextMaker } from "./Texts";
+import roboto from '/Roboto Light_Regular.json'
 
 
 export default function EducationSection(){
@@ -47,19 +48,28 @@ export default function EducationSection(){
         setProjectorGeo2(sceneProjector2)
       }
 
+      //Dependancies
+      const [clicked, setClicked] = useState(false)
+      const [hovered, setHovered] = useState(false)
 
+
+      useFrame(()=> {
+        projectorGeo2.rotation.y += 0.02
+        
+      })
 
       useEffect(() => {
         pillarGeo2.scale.set(0.003, 0.002, 0.003);
         lake.scale.set(0.11, 0.11, 0.11)
         piranhas.scale.set(0.01, 0.01, 0.01)
         mysteryBox.scale.set(2,2,2)
-        // mario.scale.set()
-      }, []);
+        
+        document.body.style.cursor = hovered ? "pointer" : "auto"
+      }, [hovered]);
       
     
-    const [clicked, setClicked] = useState(false)
-    
+
+
     return(
      <>
 
@@ -67,7 +77,9 @@ export default function EducationSection(){
       <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
 
       {/*Box*/}
-      <primitive object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
+      <primitive object={mysteryBox} 
+         
+          rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
 
       {/*Box*/}
       <primitive object={piranhas} rotation={[0, 0, 0]} position={[13.3, 2.2, -12]} />
@@ -82,15 +94,22 @@ export default function EducationSection(){
       <primitive object={projectorGeo2}  
           onClick={(e)=> {
             setClicked(!clicked)
+          }}
 
-          }} 
-          
-          rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]} />
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)}
+
+          rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]}
+          />
+
 
       {/* <TextEducationSection/> */}
-      <TextMaker  scale={[1,1,1]}  fillOpacity={clicked ? 1 : 0} color={"red"} fontSize={0.2} rotation={[0,0,0]} coords={{x:5.35, y:3.81, z:-2.6}} message={"Projects Section"}/>
-
+      <Text3D font={roboto} size={clicked ? 0.5 : 0} height={0.2} position={[3.15, 3.81 ,-2.6]}>
+      Education Setion
+          <meshNormalMaterial />
+      </Text3D>
      </>
     )
+    
 }
 

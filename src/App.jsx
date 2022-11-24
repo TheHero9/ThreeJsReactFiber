@@ -1,7 +1,7 @@
 //Import needed files
 import React, { Suspense } from 'react'
 import { Canvas, useFrame, useLoader} from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera, Stars, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
 import {AmbientLight} from "three"
 import './App.css'
@@ -23,6 +23,7 @@ import MyRoomSection from './assets/MyRoomSection';
 // import Decorations from './assets/Decorations';
 
 
+
 function App() {
   return (
     <Canvas>
@@ -40,7 +41,7 @@ function App() {
         
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
-      <PerspectiveCamera makeDefault fov={40} position={[0,5,15]}/>
+      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,5,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
       <Planes/>
@@ -51,6 +52,8 @@ function App() {
       <Floor/>
       {/* <Decorations/> */}
 
+
+      
 
       <EducationSection/>
       <ProjectsSection/>

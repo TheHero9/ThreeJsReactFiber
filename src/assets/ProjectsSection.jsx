@@ -1,11 +1,11 @@
-import { Billboard, RoundedBox} from "@react-three/drei";
-import { useLoader} from '@react-three/fiber'
+import { Billboard, RoundedBox, Text3D} from "@react-three/drei";
+import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState } from "react";
 
 
 import { TextMaker} from "./Texts";
-
+import roboto from '/Roboto Light_Regular.json'
 
 export default function ProjectsSection(){
       let tree= useLoader(
@@ -53,6 +53,13 @@ export default function ProjectsSection(){
       setProjectorGeo(sceneProjector)
     }
 
+    //Dependancies
+    const [clicked, setClicked] = useState(false)
+    const [hovered, setHovered] = useState(false)
+
+    useFrame(()=> {
+      projectorGeo.rotation.y -= 0.02
+    })
 
       useEffect(() => {
         pillarGeo.scale.set(0.003, 0.002, 0.003);
@@ -62,12 +69,12 @@ export default function ProjectsSection(){
         slide.scale.set(0.4,0.4,0.4)
 
         grass.scale.set(0.22, 0.09, 0.177)
-      });
+
+        document.body.style.cursor = hovered ? "pointer" : "auto"
+      }, [hovered]);
       
 
-      //Project text
-      const [clicked, setClicked] = useState(false)
-
+      
 
     return(
      <>
@@ -96,14 +103,21 @@ export default function ProjectsSection(){
       {/* Projector */}
       <primitive 
           onClick={(e)=> {
-            setClicked(!clicked)
+            setClicked(!
+              clicked)
           }} 
-
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)}
           object={projectorGeo} 
           rotation={[0,0.3,0]} 
           position={[-5.15,1.61,-2.0]} />
         
-        <TextMaker  color={"red"}  fillOpacity={clicked ? 1 : 0} fontSize={0.2} rotation={[0,0.4,0]} coords={{x:-5.0, y:2.29, z:-1.95}} message={"Projects Section"}/>
+        
+        {/* Text  */}
+        <Text3D font={roboto} size={clicked ? 0.5 : 0} height={0.2} position={[-7.2, 2.3 ,-1.4]} rotation={[0,0.4,0]}>
+           Projects Setion
+          <meshNormalMaterial />
+      </Text3D>
         
      </>
     )
