@@ -5,7 +5,7 @@ import { Plane } from '@react-three/drei';
 import * as THREE from "three"
 import { TextureLoader } from 'three';
 
-// import {wall} from "src/assets/wallTexture.jpg"
+
 import wall from "./wallTexture.jpg"
 
 export default function MyRoomSection(){

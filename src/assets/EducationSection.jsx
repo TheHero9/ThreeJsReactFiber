@@ -1,10 +1,9 @@
-import { Billboard, RoundedBox, Text3D} from "@react-three/drei";
+import { Text3D} from "@react-three/drei";
 import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
 import { useState } from "react";
 
-import { TextEducationSection, TextMaker } from "./Texts";
 import roboto from '/Roboto Light_Regular.json'
 
 

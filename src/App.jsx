@@ -3,9 +3,8 @@ import React, { Suspense } from 'react'
 import { Canvas, useFrame, useLoader} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
-import {AmbientLight} from "three"
 import './App.css'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
 import {Physics} from '@react-three/cannon'
 
 
