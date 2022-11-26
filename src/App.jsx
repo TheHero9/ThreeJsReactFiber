@@ -13,13 +13,13 @@ import {Physics} from '@react-three/cannon'
 import Planes from './assets/Planes';
 import Floor from './assets/Floor';
 import {Texts} from './assets/Texts';
-import Car from './assets/Car';
 import Loader from './assets/Loader';
 import ProjectsSection from './assets/ProjectsSection';
 import EducationSection from './assets/EducationSection';
 import Roads from './assets/Roads';
 import MyRoomSection from './assets/MyRoomSection';
 // import Decorations from './assets/Decorations';
+// import Car from './assets/Car';
 
 
 

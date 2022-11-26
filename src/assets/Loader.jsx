@@ -1,6 +1,6 @@
 import { Html, useProgress } from '@react-three/drei'
 
-
+//Loader scene
 export default function Loader(){
   const {progress} = useProgress()
   return <Html center>
