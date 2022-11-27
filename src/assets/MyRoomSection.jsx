@@ -7,7 +7,7 @@ import { TextureLoader } from 'three';
 
 //Photo
 import wall from "./wallTexture.jpg"
-
+import desktopPhoto from "./githubProfile.jpg"
 
 import roboto from '/Roboto Light_Regular.json'
 
@@ -64,6 +64,9 @@ export default function MyRoomSection(){
 
     const settingsURL='location=yes,height=1670,width=1120,scrollbars=yes,status=yes'
 
+    //Desktop picture loader
+    const textureDesktop = useLoader(TextureLoader, desktopPhoto)
+
     useEffect(() => {
         computer_desk.scale.set(1.4, 1.4, 1.4)
         laptop.scale.set(0.10, 0.10, 0.10)
@@ -109,6 +112,11 @@ export default function MyRoomSection(){
     <primitive object={tiles} rotation={[0, -1*Math.PI, 0]} position={[-10, 0.3, 10.2]} />
 
 
+    {/* Monitor picture */}
+    <mesh position={[-11.25, 5.24,14.56]} rotation={[0,1*Math.PI,0]} >
+        <planeBufferGeometry attach="geometry" args ={[2.94,1.71]}/>
+        <meshLambertMaterial attach="material" side={THREE.DoubleSide} map={textureDesktop}/>
+      </mesh>
 
 
     <mesh position={[-8.5,5,15.01]} rotation={[0,1*Math.PI,0]} >
@@ -147,6 +155,15 @@ export default function MyRoomSection(){
           font={roboto}  size={0.5} height={0.25} position={[-3.3, 9.3, 14.2]} rotation={[0,1*Math.PI,0]}>
            Instagram
           <meshLambertMaterial color={0x80489C} />
+      </Text3D>
+
+      <Text3D 
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)} 
+          onClick={(e) => window.open("https://github.com/TheHero9/", '_blank', settingsURL)}
+          font={roboto}  size={0.5} height={0.25} position={[-3.7, 3.3, 14.2]} rotation={[0,1*Math.PI,0]}>
+           GitHub
+          <meshLambertMaterial color={"black"} />
       </Text3D>
 
 
