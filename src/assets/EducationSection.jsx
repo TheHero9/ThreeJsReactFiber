@@ -67,7 +67,8 @@ export default function EducationSection(){
       }, [hovered]);
       
     
-
+      const test = {
+      }
 
     return(
      <>
@@ -103,9 +104,9 @@ export default function EducationSection(){
 
 
       {/* <TextEducationSection/> */}
-      <Text3D font={roboto} size={clicked ? 0.5 : 0} height={0.2} position={[3.15, 3.81 ,-2.6]}>
-      Education Setion
-          <meshNormalMaterial />
+      <Text3D font={roboto} size={clicked ? 0.5 : 0} castShadow="true"  height={0.1} {...test}  position={[2.9, 3.71 ,-2.6]}>
+      Education Section
+          <meshLambertMaterial color={0xDC5F00}/>
       </Text3D>
      </>
     )

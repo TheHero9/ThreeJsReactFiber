@@ -1,12 +1,15 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState } from "react";
 import { useLoader } from '@react-three/fiber';
-import { Plane } from '@react-three/drei';
+import { Plane,Text3D } from '@react-three/drei';
 import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
 import wall from "./wallTexture.jpg"
+
+
+import roboto from '/Roboto Light_Regular.json'
 
 export default function MyRoomSection(){
 
@@ -57,6 +60,10 @@ export default function MyRoomSection(){
     const textureWall1= useLoader(TextureLoader, wall)
     const textureWall2= useLoader(TextureLoader, wall)
 
+    const [hovered, setHovered] = useState(false)
+
+    const settingsURL='location=yes,height=1670,width=1120,scrollbars=yes,status=yes'
+
     useEffect(() => {
         computer_desk.scale.set(1.4, 1.4, 1.4)
         laptop.scale.set(0.10, 0.10, 0.10)
@@ -68,7 +75,9 @@ export default function MyRoomSection(){
         shelf1.scale.set(3, 3, 3)
         shelf2.scale.set(3, 3, 3)
         shelf3 .scale.set(3, 3, 3)
-      }, []);
+
+        document.body.style.cursor = hovered ? "pointer" : "auto"
+      }, [hovered]);
 
     return(
         <>
@@ -111,6 +120,47 @@ export default function MyRoomSection(){
         <planeBufferGeometry attach="geometry" args ={[10,15]}/>
         <meshLambertMaterial attach="material" map={textureWall1} color="aqua" />
       </mesh>
+
+
+      <Text3D
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      onClick={(e) => window.open("https://www.linkedin.com/in/demetrios-vlassis/", '_blank', settingsURL)}
+      font={roboto} size={0.5} height={0.25} position={[-3.5, 5.3, 14.2]} rotation={[0,1*Math.PI,0]}>
+           LinkedIn
+          <meshLambertMaterial color={0x0002A1} />
+      </Text3D>
+
+      <Text3D 
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)} 
+      onClick={(e) => window.open("https://www.facebook.com/dimi.v.02/", '_blank', settingsURL)}
+      font={roboto} size={0.5} height={0.25} position={[-3.4, 7.5, 14.2]} rotation={[0,1*Math.PI,0]}>
+           Facebook
+          <meshLambertMaterial color={0x332FD0}/>
+      </Text3D>
+
+      <Text3D 
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)} 
+          onClick={(e) => window.open("https://www.instagram.com/dimi.v.9/", '_blank', settingsURL)}
+          font={roboto}  size={0.5} height={0.25} position={[-3.3, 9.3, 14.2]} rotation={[0,1*Math.PI,0]}>
+           Instagram
+          <meshLambertMaterial color={0x80489C} />
+      </Text3D>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </>
     )
 }

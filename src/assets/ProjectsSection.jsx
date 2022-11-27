@@ -114,9 +114,9 @@ export default function ProjectsSection(){
         
         
         {/* Text  */}
-        <Text3D font={roboto} size={clicked ? 0.5 : 0} height={0.2} position={[-7.2, 2.3 ,-1.4]} rotation={[0,0.4,0]}>
+        <Text3D font={roboto} size={clicked ? 0.5 : 0} height={0.2} position={[-7.2, 2.4 ,-1.4]} rotation={[0,0.4,0]}>
            Projects Setion
-          <meshNormalMaterial />
+          <meshLambertMaterial color={0x001253}/>
       </Text3D>
         
      </>
