@@ -40,7 +40,7 @@ function App() {
         
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
-      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,5,15]}/>
+      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
       <Planes/>
