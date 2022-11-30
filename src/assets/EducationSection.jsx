@@ -77,9 +77,7 @@ export default function EducationSection(){
       <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
 
       {/*Box*/}
-      <primitive object={mysteryBox} 
-         
-          rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
+      <primitive object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
 
       {/*Box*/}
       <primitive object={piranhas} rotation={[0, 0, 0]} position={[13.3, 2.2, -12]} />
@@ -90,7 +88,7 @@ export default function EducationSection(){
       {/*Mario>*/}
       <primitive object={mario} rotation={[0, 0, 0]} position={[9.17, 0.2, -2.3]} />
 
-      {/*Pillar*/}
+      {/*Projector*/}
       <primitive object={projectorGeo2}  
           onClick={(e)=> {
             setClicked(!clicked)

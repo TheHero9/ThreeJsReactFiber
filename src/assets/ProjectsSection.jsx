@@ -66,6 +66,8 @@ export default function ProjectsSection(){
   
     useFrame(()=> {
       projectorGeo.rotation.y -= 0.02
+      // rock.rotation.y -= 0.02
+      // rock.rotation.x +=0.03
     })
 
       useEffect(() => {
