@@ -9,27 +9,27 @@ import roboto from '/Roboto Light_Regular.json'
 
 export default function EducationSection(){
       let lake= useLoader(
-        GLTFLoader, "src/3DImports/calm_lake/scene.gltf"
+        GLTFLoader, "./src/3DImports/calm_lake/scene.gltf"
       ).scene
 
       let mysteryBox = useLoader(
-        GLTFLoader, "src/3DImports/mystery_block/scene.gltf"
+        GLTFLoader, "./src/3DImports/mystery_block/scene.gltf"
       ).scene
 
       let piranhas = useLoader(
-        GLTFLoader, "src/3DImports/Piranhas/scene.gltf"
+        GLTFLoader, "./src/3DImports/Piranhas/scene.gltf"
       ).scene
 
       let mario = useLoader(
-        GLTFLoader, "src/3DImports/mario/scene.gltf"
+        GLTFLoader, "./src/3DImports/mario/scene.gltf"
       ).scene
     
       let pillar = useLoader(
-        GLTFLoader, "src/3DImports/Pillar/greek/scene.gltf"
+        GLTFLoader, "./src/3DImports/Pillar/greek/scene.gltf"
       )
 
       let projector= useLoader(
-        GLTFLoader, "src/3DImports/hologram_projector/scene.gltf"
+        GLTFLoader, "./src/3DImports/hologram_projector/scene.gltf"
       )
     
 

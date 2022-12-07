@@ -6,7 +6,7 @@ import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
-import wall from "./wallTexture.jpg"
+import wall from "/src/assets/wallTexture.jpg"
 import desktopPhoto from "./githubProfile.jpg"
 
 import roboto from '/Roboto Light_Regular.json'
@@ -14,7 +14,7 @@ import roboto from '/Roboto Light_Regular.json'
 export default function MyRoomSection(){
 
     let wooden_shelf= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/wooden_shelf/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/wooden_shelf/scene.gltf"
     )
 
     const [shelf1, shelfGeometry1] = useState()
@@ -34,35 +34,35 @@ export default function MyRoomSection(){
 
 
     let computer_desk= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/computer_desk/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/computer_desk/scene.gltf"
       ).scene
 
     let tiles= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/tiles/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/tiles/scene.gltf"
     ).scene
 
     let laptop= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/laptop/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/laptop/scene.gltf"
     ).scene
 
     let mousepad= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/mousepad/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/mousepad/scene.gltf"
     ).scene
 
     let office_chair= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/office_chair/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/office_chair/scene.gltf"
     ).scene
 
     let shelf= useLoader(
-        GLTFLoader, "src/3DImports/Myroom/shelf/scene.gltf"
+        GLTFLoader, "./src/3DImports/Myroom/shelf/scene.gltf"
     ).scene
 
     let pillar = useLoader(
-      GLTFLoader, "src/3DImports/Pillar/greek/scene.gltf"
+      GLTFLoader, "./src/3DImports/Pillar/greek/scene.gltf"
     )
 
     let projector= useLoader(
-      GLTFLoader, "src/3DImports/hologram_projector/scene.gltf"
+      GLTFLoader, "./src/3DImports/hologram_projector/scene.gltf"
     )
     
     //Pillar and projector

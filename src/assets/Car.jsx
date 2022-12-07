@@ -9,7 +9,7 @@ export default function Car(props){
   // const gltf = useLoader(GLTFLoader, "src/3DObjects/shibaDog/scene.gltf")
 
   let mesh = useLoader(
-    GLTFLoader, "src/3DObjects/shibaDog/scene.gltf"
+    GLTFLoader, "./src/3DObjects/shibaDog/scene.gltf"
   ).scene
 
   const position = [0, 3, 0]
