@@ -59,7 +59,7 @@ export default function EducationSection(){
 
       useEffect(() => {
         pillarGeo2.scale.set(0.003, 0.002, 0.003);
-        lake.scale.set(0.11, 0.11, 0.11)
+        // lake.scale.set(0.11, 0.11, 0.11)
         piranhas.scale.set(0.01, 0.01, 0.01)
         mysteryBox.scale.set(2,2,2)
         
@@ -74,7 +74,7 @@ export default function EducationSection(){
      <>
 
       {/* Lake*/}
-      <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
+      {/* <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} /> */}
 
       {/*Box*/}
       <primitive object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
