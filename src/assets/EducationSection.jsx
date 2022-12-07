@@ -9,7 +9,7 @@ import roboto from '/Roboto Light_Regular.json'
 
 export default function EducationSection(){
       let lake= useLoader(
-        GLTFLoader, "../src/3DImports/calm_lake/scene.gltf"
+        GLTFLoader, "../src/calm_lake/scene.gltf"
       ).scene
 
       let mysteryBox = useLoader(
