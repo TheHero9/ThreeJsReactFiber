@@ -9,38 +9,38 @@ import roboto from '/Roboto Light_Regular.json'
 
 export default function ProjectsSection(){
       let tree= useLoader(
-        GLTFLoader, "./src/3DImports/Tree/pine_tree/scene.gltf"
+        GLTFLoader, "/3DImports/Tree/pine_tree/scene.gltf"
       ).scene
 
       let signs= useLoader(
-        GLTFLoader, "./src/3DImports/signs/scene.gltf"
+        GLTFLoader, "/3DImports/signs/scene.gltf"
       ).scene
 
        let grass= useLoader(
-        GLTFLoader, "./src/3DImports/grass_ground/scene.gltf"
+        GLTFLoader, "/3DImports/grass_ground/scene.gltf"
        ).scene
 
        let pillar = useLoader(
-        GLTFLoader, "./src/3DImports/Pillar/greek/scene.gltf"
+        GLTFLoader, "/3DImports/Pillar/greek/scene.gltf"
       )
       let rock= useLoader(
-        GLTFLoader, "./src/3DImports/Rock/scene.gltf"
+        GLTFLoader, "/3DImports/Rock/scene.gltf"
       ).scene
 
       let rock2= useLoader(
-        GLTFLoader, "./src/3DImports/BigRock/scene.gltf"
+        GLTFLoader, "/3DImports/BigRock/scene.gltf"
       ).scene
 
       let slide= useLoader(
-        GLTFLoader, "./src/3DImports/slide/scene.gltf"
+        GLTFLoader, "/3DImports/slide/scene.gltf"
       ).scene
       
       let shiba= useLoader(
-        GLTFLoader, "./src/3DImports/ShibaDog/scene.gltf"
+        GLTFLoader, "/3DImports/ShibaDog/scene.gltf"
       ).scene
 
       let projector= useLoader(
-        GLTFLoader, "./src/3DImports/hologram_projector/scene.gltf"
+        GLTFLoader, "/3DImports/hologram_projector/scene.gltf"
       )
       
         
