@@ -1,0 +1,11 @@
+Model Information:
+* title:	Greek Pillar
+* source:	https://sketchfab.com/3d-models/greek-pillar-24952485c8534e2097e098f5a8810ee7
+* author:	TheRookie (https://sketchfab.com/TheRookieFUL)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Greek Pillar" (https://sketchfab.com/3d-models/greek-pillar-24952485c8534e2097e098f5a8810ee7) by TheRookie (https://sketchfab.com/TheRookieFUL) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

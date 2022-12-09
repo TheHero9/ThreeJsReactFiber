@@ -1,0 +1,11 @@
+Model Information:
+* title:	Road_Straight
+* source:	https://sketchfab.com/3d-models/road-straight-2794a5ed8069452f8c180c3c804a800b
+* author:	Marcin Gomulak (MaKiPL) (https://sketchfab.com/MaKiPL)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Road_Straight" (https://sketchfab.com/3d-models/road-straight-2794a5ed8069452f8c180c3c804a800b) by Marcin Gomulak (MaKiPL) (https://sketchfab.com/MaKiPL) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
