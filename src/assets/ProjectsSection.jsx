@@ -8,9 +8,9 @@ import { TextMaker} from "./Texts";
 import roboto from '/Roboto Light_Regular.json'
 
 export default function ProjectsSection(){
-      let tree= useLoader(
-        GLTFLoader, "/3DImports/Tree/pine_tree/scene.gltf"
-      ).scene
+      // let tree= useLoader(
+      //   GLTFLoader, "/3DImports/Tree/pine_tree/scene.gltf"
+      // ).scene
 
       let signs= useLoader(
         GLTFLoader, "/3DImports/signs/scene.gltf"
@@ -100,7 +100,7 @@ export default function ProjectsSection(){
       <primitive object={rock2} rotation={[0,9.8,0]} position={[-12.9,0.2,-13]} />
 
       {/* Pine tree */}
-      <primitive object={tree} rotation={[0,7,0]} position={[-7.1,-0.19,-11]} />
+      {/* <primitive object={tree} rotation={[0,7,0]} position={[-7.1,-0.19,-11]} /> */}
 
       {/* Grass */}
       <primitive object={grass} rotation={[0,0,0]} position={[-3.4,0.1,-4.6]} />
