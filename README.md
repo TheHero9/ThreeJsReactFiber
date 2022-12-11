@@ -1,5 +1,5 @@
 # ThreeJsReactFiber
-💼Portfolio made with Three.js and React Fiber! (LINKS ISN'T WORKING)
+💼Portfolio made with Three.js and React Fiber!
 
 
 # Clone the repo:
