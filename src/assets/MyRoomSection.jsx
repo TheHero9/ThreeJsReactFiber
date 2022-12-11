@@ -13,9 +13,9 @@ import roboto from '/Roboto Light_Regular.json'
 
 export default function MyRoomSection(){
 
-    // let wooden_shelf= useLoader(
-    //     GLTFLoader, "/3DImports/Myroom/wooden_shelf/scene.gltf"
-    // )
+    let wooden_shelf= useLoader(
+        GLTFLoader, "/3DImports/Myroom/wooden_shelf/scene.gltf"
+    )
 
     const [shelf1, shelfGeometry1] = useState()
     const [shelf2, shelfGeometry2] = useState()
@@ -134,13 +134,13 @@ export default function MyRoomSection(){
     <primitive object={shelf} rotation={[0, -1*Math.PI, 0]} position={[-5.4, -0.1, 14]} />
 
     {/*Wooden Shelf*/}
-    {/* <primitive object={shelf1} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 6.5, 14.25]} /> */}
+    <primitive object={shelf1} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 6.5, 14.25]} />
 
     {/*Wooden Shelf*/}
-    {/* <primitive object={shelf2} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 8.4, 14.25]} /> */}
+    <primitive object={shelf2} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 8.4, 14.25]} />
 
     {/*Wooden Shelf*/}
-    {/* <primitive object={shelf3} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 10.3, 14.25]} /> */}
+    <primitive object={shelf3} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 10.3, 14.25]} />
 
     {/*Tiles*/}
     <primitive object={tiles} rotation={[0, -1*Math.PI, 0]} position={[-10, 0.3, 10.2]} />

@@ -8,9 +8,9 @@ import roboto from '/Roboto Light_Regular.json'
 
 
 export default function EducationSection(){
-      // let lake= useLoader(
-      //   GLTFLoader, "/3DImports/calm_lake/scene.gltf"
-      // ).scene
+      let lake= useLoader(
+        GLTFLoader, "/3DImports/calm_lake/scene.gltf"
+      ).scene
 
       let mysteryBox = useLoader(
         GLTFLoader, "/3DImports/mystery_block/scene.gltf"
@@ -74,7 +74,7 @@ export default function EducationSection(){
      <>
 
       {/* Lake*/}
-      {/* <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} /> */}
+      <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
 
       {/*Box*/}
       <primitive object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
