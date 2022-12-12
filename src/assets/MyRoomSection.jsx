@@ -6,8 +6,8 @@ import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
-import wall from "/src/assets/wallTexture.jpg"
-import desktopPhoto from "./githubProfile.jpg"
+import wall from "/src/Photos/wallTexture.jpg"
+import desktopPhoto from "/src/Photos/githubProfile.jpg"
 
 import roboto from '/Roboto Light_Regular.json'
 

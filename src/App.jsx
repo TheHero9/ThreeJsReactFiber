@@ -26,16 +26,6 @@ import MyRoomSection from './assets/MyRoomSection';
 function App() {
   return (
     <Canvas>
-      {/* <KeyboardControls
-      map={[
-        { name: "forward", keys: ["ArrowUp", "w", "W"] },
-        { name: "backward", keys: ["ArrowDown", "s", "S"] },
-        { name: "left", keys: ["ArrowLeft", "a", "A"] },
-        { name: "right", keys: ["ArrowRight", "d", "D"] },
-        { name: "jump", keys: ["Space"] },
-      ]}> */}
-
-
       <Suspense fallback={<Loader/>}>
         
       <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
