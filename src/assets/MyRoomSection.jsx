@@ -6,6 +6,7 @@ import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
+import mapImage from "/src/Photos/mapImage.jpg"
 import wall from "/src/Photos/wallTexture.jpg"
 import desktopPhoto from "/src/Photos/githubProfile.jpg"
 

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modern  Sofa
+* source:	https://sketchfab.com/3d-models/modern-sofa-ac92f6e97eaa43c4ad6cb8f7c65ac43f
+* author:	3dimentionalben (https://sketchfab.com/3dimentionalben)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modern  Sofa" (https://sketchfab.com/3d-models/modern-sofa-ac92f6e97eaa43c4ad6cb8f7c65ac43f) by 3dimentionalben (https://sketchfab.com/3dimentionalben) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

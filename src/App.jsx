@@ -13,10 +13,11 @@ import Planes from './assets/Planes';
 import Floor from './assets/Floor';
 import {Texts} from './assets/Texts';
 import Loader from './assets/Loader';
+import Roads from './assets/Roads';
 import ProjectsSection from './assets/ProjectsSection';
 import ExperiencenSection from './assets/ExperienceSection';
-import Roads from './assets/Roads';
 import MyRoomSection from './assets/MyRoomSection';
+import WaitingSection from './assets/WaitingSection';
 // import Decorations from './assets/Decorations';
 // import Car from './assets/Car';
 
@@ -30,7 +31,7 @@ function App() {
 
 
     {/* Main Camera */}
-      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
+      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0, 6, 13]}/>
       
     {/* My Imports */}
       <>
@@ -45,6 +46,7 @@ function App() {
       <ExperiencenSection/>
       <ProjectsSection/>
       <MyRoomSection/> 
+      <WaitingSection/>
     </>
       
 

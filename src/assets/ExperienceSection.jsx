@@ -103,7 +103,7 @@ export default function EducationSection(){
 
       {/* <TextEducationSection/> */}
       <Text3D font={roboto} size={clicked ? 0.5 : 0} castShadow="true"  height={0.1} {...test}  position={[2.9, 3.71 ,-2.6]}>
-      Education Section
+      Experience Section
           <meshLambertMaterial color={0x001253}/>
       </Text3D>
      </>
