@@ -3,9 +3,8 @@ import React, { Suspense } from 'react'
 import { Canvas, useFrame, useLoader} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
-import './App.css'
-
 import {Physics} from '@react-three/cannon'
+import './App.css'
 
 
 
@@ -15,7 +14,7 @@ import Floor from './assets/Floor';
 import {Texts} from './assets/Texts';
 import Loader from './assets/Loader';
 import ProjectsSection from './assets/ProjectsSection';
-import EducationSection from './assets/EducationSection';
+import ExperiencenSection from './assets/ExperienceSection';
 import Roads from './assets/Roads';
 import MyRoomSection from './assets/MyRoomSection';
 // import Decorations from './assets/Decorations';
@@ -27,38 +26,40 @@ function App() {
   return (
     <Canvas>
       <Suspense fallback={<Loader/>}>
-        
-      <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
+        <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
+
+    {/* Main Camera */}
       <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
-      {/* <primitive object={new THREE.AxesHelper(2)}/> */}
-
+      
+    {/* My Imports */}
+      <>
       <Planes/>
-      {/* <Car/> */}
       <Texts/>
-      {/* <Text className="hide" depthOffset={20}  fillOpacity={1} position={[0,5,0]}>Hello</Text> */}
-
       <Floor/>
-      {/* <Decorations/> */}
+      <Roads/>
+      </>
 
-
+    {/* Sections */}
+    <>
+      <ExperiencenSection/>
+      <ProjectsSection/>
+      <MyRoomSection/> 
+    </>
       
 
-      <EducationSection/>
-      <ProjectsSection/>
-      <MyRoomSection/>
-
-      <Roads/>
-
+    {/* Other Imports */}
+    <>
       <ambientLight/>
+      <pointLight position={[7,0,-7]}/>
       <Stars/>
       <OrbitControls/>
+    </>
 
-      <pointLight position={[7,0,-7]}/>
-      </Physics>
+      
+      
+        </Physics>
       </Suspense>
-
-      {/* </KeyboardControls> */}
     </Canvas>
   )
 }
