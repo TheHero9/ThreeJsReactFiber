@@ -1,6 +1,6 @@
 //Import needed files
 import React, { Suspense } from 'react'
-import { Canvas, useFrame, useLoader} from '@react-three/fiber'
+import { Canvas, useFrame, useLoader, useThree} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
 import {Physics} from '@react-three/cannon'
@@ -24,6 +24,7 @@ import WaitingSection from './assets/WaitingSection';
 
 
 function App() {
+
   return (
     <Canvas>
       <Suspense fallback={<Loader/>}>
@@ -31,8 +32,8 @@ function App() {
 
 
     {/* Main Camera */}
-      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0, 6, 13]}/>
-      
+      <PerspectiveCamera rotateOnAxis={y} makeDefault fov={40} zoom={1} rotation={[0,1*Math.PI,0]} position={[0, 50, -50]}/>
+        {/* 0,6,13 */}
     {/* My Imports */}
       <>
       <Planes/>
