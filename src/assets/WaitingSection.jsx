@@ -7,6 +7,7 @@ import { TextureLoader } from 'three';
 
 import mapImage from "/src/Photos/mapImage.jpg"
 import roboto from '/Roboto Light_Regular.json'
+import walltexture from '/src/Photos/wallTextureWaiting.jpg'
 
 export default function WaitingSection(){
     let frame= useLoader(
@@ -18,7 +19,9 @@ export default function WaitingSection(){
       ).scene
 
       const textureMap = useLoader(TextureLoader, mapImage)
+      const walltexture2= useLoader(TextureLoader, walltexture)
     
+      const [clicked, setClicked] = useState(true)
       const [hovered, setHovered] = useState(false)
 
       useEffect(() => {
@@ -47,28 +50,48 @@ export default function WaitingSection(){
         {/* Walls */}
     <mesh position={[6.5 , 6.1, 15]} rotation={[0,1*Math.PI,0]} >
         <planeBufferGeometry attach="geometry" args ={[17,12]}/>
-        <meshLambertMaterial attach="material"  color={"aqua"} />
+        <meshLambertMaterial attach="material" map={walltexture2} color={"aqua"} />
       </mesh>
 
       <mesh position={[15, 6.1, 10.4]} rotation={[0,1.5*Math.PI,0]} >
         <planeBufferGeometry attach="geometry" args ={[9.3,12]}/>
-        <meshLambertMaterial attach="material"  color={0x7DE5ED} />
+        <meshLambertMaterial attach="material" map={walltexture2} color={0x7DE5ED} />
       </mesh>
 
         {/* Button */}
-        <RoundedBox 
+      <RoundedBox 
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
+        onClick={() => setClicked(!clicked)}
         args={[3, 1.5, 0.5]} position={[1, 4.6, 14.6]} radius={0.05} smoothness={4}>
             <meshPhongMaterial color="#1C315E" />
-
-            <Text3D 
             
+
+            <Text3D
             font={roboto} size={0.6} position={[0.9, -0.25 , -0.2]} castShadow="true"  rotation={[0, 1*Math.PI, 0]} height={0.1} >
             Click
                 <meshLambertMaterial color={"white"}/>
             </Text3D>
-        </RoundedBox>
+      </RoundedBox>
+
+            <Text3D
+            font={roboto} size={clicked ? 0.0 : 0.6} position={[13.3, 9.15 , 14.8]} castShadow="true" rotation={[0, 1*Math.PI, 0]} height={0.15} >
+            Welcome to my world!
+                <meshLambertMaterial color={"#1C315E"}/>
+            </Text3D>
+
+            <Text3D
+            font={roboto} size={clicked ? 0.0 : 0.5} position={[14.2, 7.85 , 14.8]} castShadow="true"  rotation={[0, 1*Math.PI, 0]} height={0.15} >
+            Click on each of the projectors
+                <meshLambertMaterial color={"#1C315E"}/>
+            </Text3D>
+
+            <Text3D
+            font={roboto} size={clicked ? 0.0 : 0.5} position={[13.3, 6.65 , 14.8]} castShadow="true"  rotation={[0, 1*Math.PI, 0]} height={0.15} >
+            to find out more about me.
+                <meshLambertMaterial color={"#1C315E"}/>
+            </Text3D>
+        
         </>
     )
 }
