@@ -32,7 +32,7 @@ function App() {
 
 
     {/* Main Camera */}
-      <PerspectiveCamera rotateOnAxis={y} makeDefault fov={40} zoom={1} rotation={[0,1*Math.PI,0]} position={[0, 50, -50]}/>
+      <PerspectiveCamera makeDefault fov={40} zoom={1} rotation={[0,1*Math.PI,0]} position={[0, 50, -50]}/>
         {/* 0,6,13 */}
     {/* My Imports */}
       <>
