@@ -9,15 +9,15 @@ import './App.css'
 
 
 //Import components
-import Planes from './assets/Planes';
-import Floor from './assets/Floor';
-import {Texts} from './assets/Texts';
-import Loader from './assets/Loader';
-import Roads from './assets/Roads';
-import ProjectsSection from './assets/ProjectsSection';
-import ExperiencenSection from './assets/ExperienceSection';
-import MyRoomSection from './assets/MyRoomSection';
-import WaitingSection from './assets/WaitingSection';
+import Planes from './OtherParts/Planes';
+import Floor from './OtherParts/Floor';
+import {Texts} from './OtherParts/Texts';
+import Loader from './OtherParts/Loader';
+import Roads from './OtherParts/Roads';
+import ProjectsSection from './ProjectsSection/ProjectsSection';
+import ExperiencenSection from './ExperienceSection/ExperienceSection';
+import MyRoomSection from './MyRoomSection/MyRoomSection';
+import WaitingSection from './WaitingSection/WaitingSection';
 // import Decorations from './assets/Decorations';
 // import Car from './assets/Car';
 

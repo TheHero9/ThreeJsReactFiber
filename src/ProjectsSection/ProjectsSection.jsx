@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState } from "react";
 
 
-import { TextMaker} from "./Texts";
+import { TextMaker} from "../OtherParts/Texts";
 import roboto from '/Roboto Light_Regular.json'
 
 export default function ProjectsSection(){
