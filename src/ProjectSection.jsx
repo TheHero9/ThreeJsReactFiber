@@ -2,10 +2,13 @@ import { Billboard, RoundedBox, Text3D} from "@react-three/drei";
 import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState } from "react";
+import { TextureLoader } from "three";
 
 
 // import { TextMaker} from "../OtherParts/Texts";
 import roboto from '/Roboto Light_Regular.json'
+import plains from "/src/Photos/PlainsBiome.jpg"
+import plains2 from "/src/Photos/plains2.jpg"
 
 export default function ProjectsSection(){
       let tree= useLoader(
@@ -56,6 +59,10 @@ export default function ProjectsSection(){
       const sceneProjector = projector.scene.clone(true)
       setProjectorGeo(sceneProjector)
     }
+
+    const plainsTexture = useLoader(TextureLoader, plains)
+    const plainsTexture2 = useLoader(TextureLoader, plains2)
+
 
     //Dependancies
     const [clicked, setClicked] = useState(false)
@@ -132,6 +139,19 @@ export default function ProjectsSection(){
            Projects Setion
           <meshLambertMaterial color={0xF5EBE0}/>
       </Text3D>
+
+
+      {/* Walls Left(For project section) */}
+    <mesh position={[-15.01, 6, -8.2]} rotation={[0, 0.5*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[14.1,12]}/>
+        <meshLambertMaterial attach="material" map={plainsTexture2} />
+      </mesh>
+
+          {/* Back wall */}
+      <mesh position={[-6.9, 6, -14.99]} rotation={[0, -2*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[16.2,12]}/>
+        <meshLambertMaterial attach="material" map={plainsTexture} />
+      </mesh>
 
 
           {/* Projects Links */}

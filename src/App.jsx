@@ -26,11 +26,8 @@ import WaitingSection from '/src/WaitingSection';
 function App() {
   return (
     <Canvas>
-
-
-      <Suspense fallback={<Loader/>}> 
-        
-        <PerspectiveCamera makeDefault fov={60} zoom={1} rotation={[0,1*Math.PI,0]} position={[1, 10, 10]}/>
+      <Suspense fallback={<Loader/>}>    
+        <PerspectiveCamera makeDefault fov={70} zoom={1} rotation={[0,1*Math.PI,0]} position={[1, 10, 5]}/>
         {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
         <ExperienceSection/>
@@ -38,14 +35,12 @@ function App() {
         <MyRoomSection/>
         <WaitingSection/>
 
-
         <Roads/>
-
         <ambientLight/>
         <Stars/>
-        <OrbitControls/>
+        <OrbitControls rotateSpeed={0.5} />
 
-        <pointLight position={[0,10, 0]}/>
+        <pointLight intensity={0.5} position={[0,10, 0]}/>
       </Suspense>
     </Canvas>
   )

@@ -3,8 +3,12 @@ import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
 import { useState } from "react";
+import { TextureLoader } from "three";
 
 import roboto from '/Roboto Light_Regular.json'
+import castle from "/src/Photos/mariocastle.jpg"
+import marioback3 from "/src/Photos/marioback3.jpg"
+import marioback from "/src/Photos/marioback.jpg"
 
 
 export default function EducationSection(){
@@ -32,6 +36,10 @@ export default function EducationSection(){
         GLTFLoader, "/projectorscene.glb"
       )
     
+
+      const castleTexture = useLoader(TextureLoader, castle)
+      const backTexture = useLoader(TextureLoader, marioback)
+      const backTexture3 = useLoader(TextureLoader, marioback3)
 
       const [pillarGeo2, setPillarGeo2] = useState()
       const [projectorGeo2, setProjectorGeo2] = useState()
@@ -100,11 +108,23 @@ export default function EducationSection(){
           rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]}
           />
 
+      {/* Walls for Experience section*/}
+    <mesh position={[15.01, 6.1, -8]} rotation={[0, -0.5*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[13.7,12]}/>
+        <meshLambertMaterial attach="material" map={backTexture}  />
+      </mesh>
+
+      {/* BackWall */}
+      <mesh position={[8.156, 6.1, -15]} rotation={[0, -2*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[14,12]}/>
+        <meshLambertMaterial attach="material"  map={backTexture3}/>
+      </mesh>
 
       {/* <TextEducationSection/> */}
-      <Text3D font={roboto} size={clicked ? 0.5 : 0} castShadow="true"  height={0.1} {...test}  position={[2.9, 3.71 ,-2.6]}>
+      <Text3D font={roboto} size={clicked ? 0.5 : 0} castShadow="true"  height={0.2} {...test}  position={[2.9, 3.71 ,-2.6]}>
       Experience Section
-          <meshLambertMaterial color={0x001253}/>
+          <meshLambertMaterial color={0x2B3A55}/>
+          {/* 0x001253 */}
       </Text3D>
      </>
     )

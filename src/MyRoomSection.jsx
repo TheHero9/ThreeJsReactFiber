@@ -179,8 +179,8 @@ export default function MyRoomSection(){
         <meshLambertMaterial attach="material" map={textureWall1} color={"aqua"} />
       </mesh>
 
-      <mesh position={[-15, 6.1, 10]} rotation={[0,-1.5*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[10,12]}/>
+      <mesh position={[-15, 6, 7.3]} rotation={[0,-1.5*Math.PI,0]} >
+        <planeBufferGeometry attach="geometry" args ={[17,12]}/>
         <meshLambertMaterial attach="material" map={textureWall1} color="aqua" />
       </mesh>
 
