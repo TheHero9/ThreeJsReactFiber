@@ -1,68 +1,69 @@
 //Import needed files
 import React, { Suspense } from 'react'
-import { Canvas, useFrame, useLoader, useThree} from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Canvas, useFrame, useLoader} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
-import {Physics} from '@react-three/cannon'
 import './App.css'
 
 
 
+
 //Import components
-import Planes from './OtherParts/Planes';
-import Floor from './OtherParts/Floor';
-import {Texts} from './OtherParts/Texts';
-import Loader from './OtherParts/Loader';
-import Roads from './OtherParts/Roads';
-import ProjectsSection from './ProjectsSection/ProjectsSection';
-import ExperiencenSection from './ExperienceSection/ExperienceSection';
-import MyRoomSection from './MyRoomSection/MyRoomSection';
-import WaitingSection from './WaitingSection/WaitingSection';
+import Planes from '/src/Planes.jsx';
+import Floor from '/src/OtherParts/Floor';
+import {Texts} from '/src/OtherParts/Texts';
+import Loader from '/src/OtherParts/Loader';
+import ExperienceSection from "/src/ExperienceSection.jsx"
+// import Project from "/src/ProjectsSection.jsx"
+import ProjectsSection from '/src/ProjectSection.jsx';
+// import EducationSection from './assets/EducationSection';
+import Roads from '/src/OtherParts/Roads';
+import MyRoomSection from '/src/MyRoomSection.jsx';
+import WaitingSection from '/src/WaitingSection';
 // import Decorations from './assets/Decorations';
 // import Car from './assets/Car';
 
 
 
 function App() {
-
   return (
     <Canvas>
-      <Suspense fallback={<Loader/>}>
-        <Physics broadphase='SAP' gravity={[0, -2.6, 0]}>
 
 
-    {/* Main Camera */}
+      <Suspense fallback={<Loader/>}> 
+        
       <PerspectiveCamera makeDefault fov={40} zoom={1} rotation={[0,1*Math.PI,0]} position={[0, 50, -50]}/>
-        {/* 0,6,13 */}
-    {/* My Imports */}
-      <>
-      <Planes/>
+      {/* <primitive object={new THREE.AxesHelper(2)}/> */}
+
+      {/* <Planes/> */}
+      {/* <Car/> */}
       <Texts/>
-      <Floor/>
-      <Roads/>
-      </>
+      {/* <Text className="hide" depthOffset={20}  fillOpacity={1} position={[0,5,0]}>Hello</Text> */}
 
-    {/* Sections */}
-    <>
-      <ExperiencenSection/>
-      <ProjectsSection/>
-      <MyRoomSection/> 
-      <WaitingSection/>
-    </>
+      {/* <Floor/> */}
+      {/* <Decorations/> */}
+
+    {/* Lake*/}
+    {/* <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} /> */}
       
+      <ExperienceSection/>
+      <ProjectsSection/>
+      {/* <EducationSection/> */}
 
-    {/* Other Imports */}
-    <>
+      <MyRoomSection/>
+      <WaitingSection/>
+
+      <Roads/>
+
       <ambientLight/>
-      <pointLight position={[7,0,-7]}/>
       <Stars/>
       <OrbitControls/>
-    </>
 
-      
-      
-        </Physics>
+      <pointLight position={[7,0,0]}/>
       </Suspense>
+
+      {/* </KeyboardControls> */}
     </Canvas>
   )
 }

@@ -1,6 +1,6 @@
 import * as THREE from "three" 
 import {Plane, RoundedBox} from '@react-three/drei';
-import {usePlane} from "@react-three/cannon"
+// import {usePlane} from "@react-three/cannon"
 import { useRef } from "react";
 
 export default function Floor(){

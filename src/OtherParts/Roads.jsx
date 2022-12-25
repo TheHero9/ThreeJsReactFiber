@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Roads(){
     let road= useLoader(
-        GLTFLoader, "/3DImports/road_straight/scene.gltf"
+        GLTFLoader, "/roadscene.glb"
       )
 
       const [geometry, setGeometry] = useState()
