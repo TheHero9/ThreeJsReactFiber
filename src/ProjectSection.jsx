@@ -159,7 +159,7 @@ export default function ProjectsSection(){
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={(e) => window.open("https://thehero9.github.io/Portfolio3.0/", '_blank', settingsURL)}
-      font={roboto} size={clicked ? 0.5 : 0} height={0.15} position={[-1.7, 1.5, -7.3]} rotation={[0, 0.3,0]}>
+      font={roboto} size={clicked ? 0.5 : 0} height={0.17} position={[-1.7, 1.5, -7.3]} rotation={[0, 0.3,0]}>
            CV
           <meshLambertMaterial color={0xF5EBE0}/>
       </Text3D>
@@ -168,7 +168,7 @@ export default function ProjectsSection(){
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={(e) => window.open("https://thehero9.github.io/NumberLe-The-Game/", '_blank', settingsURL)}
-      font={roboto} size={clicked ? 0.4 : 0} height={0.15} position={[-3.7, 1.5, -6.7]} rotation={[0, 0.3,0]}>
+      font={roboto} size={clicked ? 0.4 : 0} height={0.17} position={[-3.7, 1.5, -6.7]} rotation={[0, 0.3,0]}>
            Game
           <meshLambertMaterial color={0xF5EBE0}/>
       </Text3D>
@@ -177,7 +177,7 @@ export default function ProjectsSection(){
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={(e) => window.open("https://thehero9.github.io/Blog-react/", '_blank', settingsURL)}
-      font={roboto} size={clicked ? 0.4 : 0} height={0.15} position={[-5.3, 1.7, -6.2]} rotation={[0, 0.3,0]}>
+      font={roboto} size={clicked ? 0.4 : 0} height={0.17} position={[-5.3, 1.7, -6.2]} rotation={[0, 0.3,0]}>
            Blog
           <meshLambertMaterial color={0xF5EBE0}/>
       </Text3D>

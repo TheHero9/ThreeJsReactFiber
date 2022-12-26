@@ -21,3 +21,28 @@ html, body, #root {
 .show{
   visibility: none;
 }
+
+
+.loader-text{
+  color: green;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.loader-image{
+  z-index: -1;
+  width: 300%;
+  text-align: center;
+  overflow: hidden;
+}
+
+#divid{
+  /* width: 20%; */
+  border: 10px solid red;
+}
+
+
+.test{
+  border: 2px solid red;
+}
