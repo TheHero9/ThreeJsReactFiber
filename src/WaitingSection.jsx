@@ -10,6 +10,7 @@ import roboto from '/Roboto Light_Regular.json'
 import walltexture from '/src/Photos/wallTextureWaiting.jpg'
 import metal from "/src/Photos/metal.jpg"
 import wood from "/src/Photos/wood.jpg"
+import positano from "/src/Photos/positano.jpg"
 
 export default function WaitingSection(){
     let frame= useLoader(
@@ -24,10 +25,15 @@ export default function WaitingSection(){
         GLTFLoader, "/modernsofascene.glb"
       ).scene
 
+      let pictureframe = useLoader(
+        GLTFLoader, "/pictureframescene.glb"
+      ).scene
+
       const textureMap = useLoader(TextureLoader, mapImage)
       const walltexture2= useLoader(TextureLoader, walltexture)
       const metalTexture = useLoader(TextureLoader, metal)
       const woodTexture = useLoader(TextureLoader, wood)
+      const positanoTexture = useLoader(TextureLoader, positano)
     
       const [clicked, setClicked] = useState(true)
       const [hovered, setHovered] = useState(false)
@@ -36,6 +42,7 @@ export default function WaitingSection(){
         frame.scale.set(0.02, 0.02, 0.03)
         sofa.scale.set(6, 6, 6)
         plant.scale.set(3, 3, 3)
+        pictureframe.scale.set(4,4,1)
 
         document.body.style.cursor = hovered ? "pointer" : "auto"
       }, [hovered]);
@@ -55,6 +62,15 @@ export default function WaitingSection(){
 
         {/* Sofa */}
         <primitive object={sofa} position={[8.7, 2, 12.4]} rotation={[0, 1*Math.PI ,0]}/>
+
+        {/* Picture Frame */}
+        <primitive object={pictureframe} position={[14.72, 7 ,6]} rotation={[0, 0.5*Math.PI ,0]}/>
+
+        {/* Picture Positano */}
+        <mesh position={[14.7,7,6]} rotation={[0,1.5*Math.PI,0]} >
+        <planeBufferGeometry attach="geometry" args ={[7,4]}/>
+        <meshLambertMaterial attach="material" map={positanoTexture}/>
+      </mesh>
 
         {/* Plant */}
         <primitive object={plant} position={[0, 0.1, 12.6]} rotation={[0, 1*Math.PI ,0]}/>

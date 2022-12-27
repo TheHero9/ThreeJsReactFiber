@@ -108,7 +108,7 @@ export default function MyRoomSection(){
 
         shelf1.scale.set(3, 3, 3)
         shelf2.scale.set(3, 3, 3)
-        shelf3 .scale.set(3, 3, 3)
+        shelf3.scale.set(3, 3, 3)
 
 
         pillarGeo3.scale.set(0.002, 0.0015, 0.002);

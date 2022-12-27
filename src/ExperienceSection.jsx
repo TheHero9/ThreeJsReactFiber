@@ -1,4 +1,4 @@
-import { Text3D} from "@react-three/drei";
+import { Box, Text3D} from "@react-three/drei";
 import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
@@ -59,10 +59,17 @@ export default function EducationSection(){
       const [clicked, setClicked] = useState(false)
       const [hovered, setHovered] = useState(false)
 
+      const [clickedBox, setClickedBox] = useState(false)
+      const [hoveredBox, setHoveredBox] = useState(false)
+
+      // Links
+      const settingsURL='location=yes,height=1670,width=1120,scrollbars=yes,status=yes'
 
       useFrame(()=> {
-        projectorGeo2.rotation.y += 0.02
-        
+        projectorGeo2.rotation.y += 0.02   
+
+        mysteryBox.rotation.y += 0.0019
+
       })
 
       useEffect(() => {
@@ -72,7 +79,8 @@ export default function EducationSection(){
         mysteryBox.scale.set(2,2,2)
         
         document.body.style.cursor = hovered ? "pointer" : "auto"
-      }, [hovered]);
+        document.body.style.cursor = hoveredBox ? "pointer" : "auto"
+      }, [hovered, hoveredBox]);
       
     
       const test = {
@@ -85,9 +93,16 @@ export default function EducationSection(){
       <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
 
       {/*Box*/}
-      <primitive object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
+      <primitive onClick={(e) =>{
+        setClickedBox(true)
+        window.open("https://github.com/TheHero9/Experience", '_blank', settingsURL)
+      }} 
+      onPointerOver={() => setHoveredBox(true)}
+      onPointerOut={() => setHoveredBox(false)}
+      
+      object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
 
-      {/*Box*/}
+      {/*Piranhas*/}
       <primitive object={piranhas} rotation={[0, 0, 0]} position={[13.3, 2.2, -12]} />
 
       {/*Pillar*/}
@@ -100,6 +115,7 @@ export default function EducationSection(){
       <primitive object={projectorGeo2}  
           onClick={(e)=> {
             setClicked(!clicked)
+            // setTimeout(mysteryBox.rotation.y += 0.01, 2000)
           }}
 
           onPointerOver={() => setHovered(true)}
@@ -123,9 +139,11 @@ export default function EducationSection(){
       {/* <TextEducationSection/> */}
       <Text3D font={roboto} size={clicked ? 0.5 : 0} castShadow="true"  height={0.2} {...test}  position={[2.9, 3.71 ,-2.6]}>
       Experience Section
-          <meshLambertMaterial color={0x2B3A55}/>
+          <meshLambertMaterial color={"white"}/>
           {/* 0x001253 */}
       </Text3D>
+
+
      </>
     )
     
