@@ -134,8 +134,8 @@ export default function EducationSection(){
             // setTimeout(mysteryBox.rotation.y += 0.01, 2000)
           }}
 
-          onPointerOver={() => setHovered(true)}
-          onPointerOut={() => setHovered(false)}
+          onPointerOver={() => setHoveredBox(true)}
+          onPointerOut={() => setHoveredBox(false)}
 
           rotation={[0, 0, 0]} position={[5.35, 3.11,-2.6]}
           />
