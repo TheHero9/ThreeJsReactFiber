@@ -116,7 +116,18 @@ export default function ProjectsSection(){
       <primitive object={slide} rotation={[0,2,0]} position={[-3.9,-0.05,-12]} />
 
       {/* Shiba Dog */}
-      <primitive object={shiba} rotation={[0.3,0,0]} position={[-9.5,2.3,-3.2]} />
+      <primitive 
+      onPointerOver={()=>{
+        setHovered(true)
+
+        var soundDog = new Audio("./sounds/bark.mp3")
+        soundDog.play()
+      }}
+      onPointerOut={()=>{
+        setHovered(false)
+      }}
+      
+      object={shiba} rotation={[0.3,0,0]} position={[-9.5,2.3,-3.2]} />
 
       {/* Signs */}
       <primitive object={signs} rotation={[0,0.3,0]} position={[-3,0,-7]} />

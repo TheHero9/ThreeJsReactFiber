@@ -96,6 +96,9 @@ export default function EducationSection(){
       <primitive onClick={(e) =>{
         setClickedBox(true)
         window.open("https://github.com/TheHero9/Experience", '_blank', settingsURL)
+
+        var sound2 = new Audio("./sounds/coin.mp3");
+        sound2.play();
       }} 
       onPointerOver={() => setHoveredBox(true)}
       onPointerOut={() => setHoveredBox(false)}
@@ -103,13 +106,26 @@ export default function EducationSection(){
       object={mysteryBox} rotation={[0,-0.3,0]} position={[5.6, 4.4, -13]} />
 
       {/*Piranhas*/}
-      <primitive object={piranhas} rotation={[0, 0, 0]} position={[13.3, 2.2, -12]} />
+      <primitive onClick={()=>{
+        var sound3 = new Audio("./sounds/pipetravel.mp3")
+        sound3.play()
+      }} 
+      onPointerOver={() => setHoveredBox(true)}
+      onPointerOut={() => setHoveredBox(false)}
+       object={piranhas} rotation={[0, 0, 0]} position={[13.3, 2.2, -12]} />
 
       {/*Pillar*/}
       <primitive object={pillarGeo2} rotation={[0, 0, 0]} position={[5.47, 1.7,-2.6]} />
 
       {/*Mario>*/}
-      <primitive object={mario} rotation={[0, 0, 0]} position={[9.17, 0.2, -2.3]} />
+      <primitive onClick={() => {
+        var sound1 = new Audio("./sounds/marioJump.mp3");
+        sound1.play();
+      }}
+      
+      onPointerOver={() => setHoveredBox(true)}
+      onPointerOut={() => setHoveredBox(false)}
+      object={mario} rotation={[0, 0, 0]} position={[9.17, 0.2, -2.3]} />
 
       {/*Projector*/}
       <primitive object={projectorGeo2}  
