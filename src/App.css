@@ -24,25 +24,37 @@ html, body, #root {
 
 
 .loader-text{
-  color: green;
-  z-index: 2;
+  margin: auto;
+  background-color: rgb(38, 41, 230);
+  border-radius: 30px;
+  width:60%;
+  color: black;
   position: relative;
   text-align: center;
 }
 
-.loader-image{
-  z-index: -1;
-  width: 300%;
-  text-align: center;
-  overflow: hidden;
+
+.testwe{
+  height: 100vh;
+  width: 100vw;
+  /* background-color: black; */
 }
 
-#divid{
-  /* width: 20%; */
-  border: 10px solid red;
+.divText{
+  margin: 40px;
 }
 
+.divLoader{
+  margin: 70px;
+  border-radius: 30;
+  /* background-color: black; */
+}
 
-.test{
-  border: 2px solid red;
+h3{
+  color: rgb(38, 41, 230);
+  text-align:  center;
+}
+
+.loader{
+  margin:auto;
 }

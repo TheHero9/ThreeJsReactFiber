@@ -1,14 +1,25 @@
 import { Html, useProgress } from '@react-three/drei'
 
+import ReactLoading from 'react-loading'
+
+
+
 //Loader scene
 export default function Loader(){
   const {progress} = useProgress()
-  return <Html center>
-    <div id="divid">
-      <h1 className="loader-text">{Math.round(progress)} % Loaded. Please wait!</h1>
+  return <Html className='testwe' center>
+
+    <div className={"divText"}>
+      <h1 className="loader-text">{Math.round(progress)}% Loaded. Please wait!</h1>
       {/* <img class="loader-image" src="/src/Photos/backgroundImage2.png" alt="loading image"></img> */}
-      {/* <h3>Hello </h3> */}
     </div>
-    
+
+    <div className='divLoader'>
+      <ReactLoading className='loader' type={"spin"} color={"blue"} width={175} height={175} />
+    </div>
+
+    <div className={'divTip'}>
+        <h3>Tip: Click on each of the projectors to find more about me.</h3>
+    </div>
     </Html>
 }
