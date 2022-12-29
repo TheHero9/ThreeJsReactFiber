@@ -19,7 +19,7 @@ export default function Loader(){
     </div>
 
     <div className={'divTip'}>
-        <h3>Tip: Click on each of the projectors to find more about me.</h3>
+        <h3>Tip: Don't switch sections too fast, it may cause lag.</h3>
     </div>
     </Html>
 }
