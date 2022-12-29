@@ -174,7 +174,7 @@ export default function MyRoomSection(){
           />
     
     <Text3D font={roboto} size={clicked ? 0.35 : 0} castShadow="true"  height={0.1}   position={[-13.1, 5.71, 12.3]} rotation={[0, 2.5, 0]}>
-      Cotacts
+      Contacts
           <meshLambertMaterial color={"black"}/>
       </Text3D>
 
