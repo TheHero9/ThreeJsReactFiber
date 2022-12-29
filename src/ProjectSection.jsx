@@ -68,6 +68,10 @@ export default function ProjectsSection(){
     const [clicked, setClicked] = useState(false)
     const [hovered, setHovered] = useState(false)
 
+    const [hoveredCV, setHoveredCv] = useState(false)
+    const [hoveredGame, setHoveredGame] = useState(false)
+    const [hoveredBlog, setHoveredBlog] = useState(false)
+
     //Link
     const settingsURL='location=yes,height=1670,width=1120,scrollbars=yes,status=yes'
   
@@ -167,30 +171,38 @@ export default function ProjectsSection(){
 
           {/* Projects Links */}
       <Text3D
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
+      onPointerOver={() => {
+        setHovered(true)
+        setHoveredCv(true)}}
+      onPointerOut={() => {
+        setHovered(false)
+        setHoveredCv(false)}}
       onClick={(e) => window.open("https://thehero9.github.io/Portfolio3.0/", '_blank', settingsURL)}
       font={roboto} size={clicked ? 0.5 : 0} height={0.17} position={[-1.7, 1.5, -7.3]} rotation={[0, 0.3,0]}>
            CV
-          <meshLambertMaterial color={0xF5EBE0}/>
+          <meshLambertMaterial color={hoveredCV ? 0xFBC252 : 0xF5EBE0}/>
       </Text3D>
 
       <Text3D 
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
+      onPointerOver={() => {setHovered(true)
+      setHoveredGame(true)}}
+      onPointerOut={() => {setHovered(false)
+      setHoveredGame(false)}}
       onClick={(e) => window.open("https://thehero9.github.io/NumberLe-The-Game/", '_blank', settingsURL)}
       font={roboto} size={clicked ? 0.4 : 0} height={0.17} position={[-3.7, 1.5, -6.7]} rotation={[0, 0.3,0]}>
            Game
-          <meshLambertMaterial color={0xF5EBE0}/>
+          <meshLambertMaterial color={hoveredGame? 0xFBC252 : 0xF5EBE0}/>
       </Text3D>
 
       <Text3D 
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
+      onPointerOver={() => {setHovered(true)
+      setHoveredBlog(true)}}
+      onPointerOut={() => {setHovered(false)
+      setHoveredBlog(false)}}
       onClick={(e) => window.open("https://thehero9.github.io/Blog-react/", '_blank', settingsURL)}
       font={roboto} size={clicked ? 0.4 : 0} height={0.17} position={[-5.3, 1.7, -6.2]} rotation={[0, 0.3,0]}>
            Blog
-          <meshLambertMaterial color={0xF5EBE0}/>
+          <meshLambertMaterial color={hoveredBlog ? 0xFBC252 : 0xF5EBE0}/>
       </Text3D>
         
      </>
