@@ -153,14 +153,14 @@ export default function ProjectsSection(){
 
 
       {/* Walls Left(For project section) */}
-    <mesh position={[-15.01, 6, -8.2]} rotation={[0, 0.5*Math.PI, 0]} >
-        <planeBufferGeometry attach="geometry" args ={[14.1,12]}/>
+    <mesh position={[-15.01, 6.05, -8.2]} rotation={[0, 0.5*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[14, 12.1]}/>
         <meshLambertMaterial attach="material" map={plainsTexture2} />
       </mesh>
 
           {/* Back wall */}
-      <mesh position={[-6.9, 6, -14.99]} rotation={[0, -2*Math.PI, 0]} >
-        <planeBufferGeometry attach="geometry" args ={[16.2,12]}/>
+      <mesh position={[-6.9, 6.05, -14.99]} rotation={[0, -2*Math.PI, 0]} >
+        <planeBufferGeometry attach="geometry" args ={[16.2, 12.1]}/>
         <meshLambertMaterial attach="material" map={plainsTexture} />
       </mesh>
 

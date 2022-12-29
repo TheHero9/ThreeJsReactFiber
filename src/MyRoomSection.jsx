@@ -9,6 +9,7 @@ import { TextureLoader } from 'three';
 import mapImage from "/src/Photos/mapImage.jpg"
 import wall from "/src/Photos/wallTexture.jpg"
 import desktopPhoto from "/src/Photos/githubProfile.jpg"
+import metalText from "/src/Photos/metalText.jpg"
 
 import roboto from '/Roboto Light_Regular.json'
 
@@ -85,9 +86,19 @@ export default function MyRoomSection(){
     const textureWall1= useLoader(TextureLoader, wall)
     const textureWall2= useLoader(TextureLoader, wall)
 
+    const metalTexture1 = useLoader(TextureLoader, metalText)
+    const metalTexture2 = useLoader(TextureLoader, metalText)
+    const metalTexture3 = useLoader(TextureLoader, metalText)
+    const metalTexture4 = useLoader(TextureLoader, metalText)
+
     //Dependancies
     const [clicked, setClicked] = useState(false)
     const [hovered, setHovered] = useState(false)
+
+    const [hoveredGitHub, setHoveredGitHub] = useState(false)
+    const [hoveredLinkedin, setHoveredLinkedin] = useState(false)
+    const [hoveredInstagram, setHoveredInstagram] = useState(false)
+    const [hoveredFacebook, setHoveredFacebook] = useState(false)
 
     const settingsURL='location=yes,height=1670,width=1120,scrollbars=yes,status=yes'
 
@@ -179,46 +190,62 @@ export default function MyRoomSection(){
         <meshLambertMaterial attach="material" map={textureWall1} color={"aqua"} />
       </mesh>
 
-      <mesh position={[-15, 6, 7.3]} rotation={[0,-1.5*Math.PI,0]} >
+      <mesh position={[-15, 6.1, 7.3]} rotation={[0,-1.5*Math.PI,0]} >
         <planeBufferGeometry attach="geometry" args ={[17,12]}/>
         <meshLambertMaterial attach="material" map={textureWall1} color="aqua" />
       </mesh>
 
 
       <Text3D
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
+      onPointerOver={() => {
+        setHovered(true)
+        setHoveredLinkedin(true)}}
+      onPointerOut={() => {
+        setHovered(false)
+        setHoveredLinkedin(false)}}
       onClick={(e) => window.open("https://www.linkedin.com/in/demetrios-vlassis/", '_blank', settingsURL)}
       font={roboto} size={clicked ? 0.5 : 0} height={0.25} position={[-3.5, 5.3, 14.2]} rotation={[0,1*Math.PI,0]}>
            LinkedIn
-          <meshLambertMaterial color={0x0002A1} />
+          <meshLambertMaterial map={metalTexture1} color={hoveredLinkedin ? 0x4B56D2 : 0x0002A1} />
       </Text3D>
 
       <Text3D 
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)} 
+      onPointerOver={() => {
+        setHovered(true)
+        setHoveredFacebook(true)}}
+      onPointerOut={() => {
+        setHovered(false)
+        setHoveredFacebook(false)}} 
       onClick={(e) => window.open("https://www.facebook.com/dimi.v.02/", '_blank', settingsURL)}
       font={roboto} size={clicked ? 0.5 : 0} height={0.25} position={[-3.4, 7.5, 14.2]} rotation={[0,1*Math.PI,0]}>
            Facebook
-          <meshLambertMaterial color={0x332FD0}/>
+          <meshLambertMaterial map={metalTexture2} color={hoveredFacebook? 0x205295 : 0x332FD0}/>
       </Text3D>
 
       <Text3D 
-          onPointerOver={() => setHovered(true)}
-          onPointerOut={() => setHovered(false)} 
+          onPointerOver={() => {
+            setHovered(true)
+            setHoveredInstagram(true)}}
+          onPointerOut={() => {
+            setHovered(false)
+            setHoveredInstagram(false)}} 
           onClick={(e) => window.open("https://www.instagram.com/dimi.v.9/", '_blank', settingsURL)}
           font={roboto}  size={clicked ? 0.5 : 0} height={0.25} position={[-3.3, 9.3, 14.2]} rotation={[0,1*Math.PI,0]}>
            Instagram
-          <meshLambertMaterial color={0x80489C} />
+          <meshLambertMaterial map={metalTexture3} color={hoveredInstagram ? 0xC85C8E : 0x80489C} />
       </Text3D>
 
       <Text3D 
-          onPointerOver={() => setHovered(true)}
-          onPointerOut={() => setHovered(false)} 
+          onPointerOver={() => {
+            setHovered(true)
+            setHoveredGitHub(true)}}
+          onPointerOut={() =>{
+            setHovered(false)
+            setHoveredGitHub(false)}} 
           onClick={(e) => window.open("https://github.com/TheHero9/", '_blank', settingsURL)}
           font={roboto}  size={clicked ? 0.5 : 0} height={0.25} position={[-3.7, 3.3, 14.2]} rotation={[0,1*Math.PI,0]}>
            GitHub
-          <meshLambertMaterial color={"black"} />
+          <meshLambertMaterial map={metalTexture4} color={hoveredGitHub ? 0x6B728E : "black"} />
       </Text3D>
 
 
