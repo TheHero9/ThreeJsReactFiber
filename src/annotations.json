@@ -1,0 +1,55 @@
+[  
+    {
+      "title": "⌛ Waiting Room",
+      "position": {
+        "x": 8,
+        "y": 8,
+        "z": -4
+      },
+      "lookAt": {
+        "x": 10,
+        "y": 6,
+        "z": 10
+      }
+    },  
+    {
+      "title": "🔧 Projects",
+      "position": {
+        "x": -3.5,
+        "y": 5,
+        "z": 7
+      },
+      "lookAt": {
+        "x": -7.5,
+        "y": 5,
+        "z": -5
+      }
+    },
+    {
+      "title": "🏫 Experience",
+      "position": {
+        "x": 7.5,
+        "y": 5,
+        "z": 7
+      },
+      "lookAt": {
+        "x": 7.5,
+        "y": 5,
+        "z": -5
+      }
+    },
+    {
+      "title": "✉️ Contact me",
+      "position": {
+        "x": -1,
+        "y": 6,
+        "z": 2
+      },
+      "lookAt": {
+        "x": -6.5,
+        "y": 6,
+        "z": 10
+      }
+    }
+  ]
+  
