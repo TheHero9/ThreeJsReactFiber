@@ -1,4 +1,4 @@
-import { Box, Text3D} from "@react-three/drei";
+import {Text3D} from "@react-three/drei";
 import { useFrame, useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
@@ -6,7 +6,6 @@ import { useState } from "react";
 import { TextureLoader } from "three";
 
 import roboto from '/Roboto Light_Regular.json'
-import castle from "/src/Photos/mariocastle.jpg"
 import marioback3 from "/src/Photos/marioback3.jpg"
 import marioback from "/src/Photos/marioback.jpg"
 
@@ -36,8 +35,6 @@ export default function EducationSection(){
         GLTFLoader, "/projectorscene.glb"
       )
     
-
-      const castleTexture = useLoader(TextureLoader, castle)
       const backTexture = useLoader(TextureLoader, marioback)
       const backTexture3 = useLoader(TextureLoader, marioback3)
 
@@ -45,7 +42,6 @@ export default function EducationSection(){
       const [projectorGeo2, setProjectorGeo2] = useState()
 
       if(!pillarGeo2){
-
         const scene2 = pillar.scene.clone(true)
         setPillarGeo2(scene2)
       }
@@ -131,7 +127,6 @@ export default function EducationSection(){
       <primitive object={projectorGeo2}  
           onClick={(e)=> {
             setClicked(!clicked)
-            // setTimeout(mysteryBox.rotation.y += 0.01, 2000)
           }}
 
           onPointerOver={() => setHoveredBox(true)}
@@ -142,13 +137,13 @@ export default function EducationSection(){
 
       {/* Walls for Experience section*/}
     <mesh position={[15.01, 6.1, -8]} rotation={[0, -0.5*Math.PI, 0]} >
-        <planeBufferGeometry attach="geometry" args ={[13.7,12]}/>
+        <planeGeometry attach="geometry" args ={[13.7,12]}/>
         <meshLambertMaterial attach="material" map={backTexture}  />
       </mesh>
 
       {/* BackWall */}
       <mesh position={[8.156, 6.1, -15]} rotation={[0, -2*Math.PI, 0]} >
-        <planeBufferGeometry attach="geometry" args ={[14,12]}/>
+        <planeGeometry attach="geometry" args ={[14,12]}/>
         <meshLambertMaterial attach="material"  map={backTexture3}/>
       </mesh>
 

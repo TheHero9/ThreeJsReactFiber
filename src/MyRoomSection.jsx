@@ -1,12 +1,11 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useState} from "react";
 import { useLoader, useFrame } from '@react-three/fiber';
-import { Plane,Text3D } from '@react-three/drei';
+import { Text3D } from '@react-three/drei';
 import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
-import mapImage from "/src/Photos/mapImage.jpg"
 import wall from "/src/Photos/wallTexture.jpg"
 import desktopPhoto from "/src/Photos/githubProfile.jpg"
 import metalText from "/src/Photos/metalText.jpg"
@@ -180,18 +179,18 @@ export default function MyRoomSection(){
 
     {/* Monitor picture */}
     <mesh position={[-11.25, 5.24,14.56]} rotation={[0,1*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[2.94,1.71]}/>
+        <planeGeometry attach="geometry" args ={[2.94,1.71]}/>
         <meshLambertMaterial attach="material" side={THREE.DoubleSide} map={textureDesktop}/>
       </mesh>
 
     {/* Walls */}
     <mesh position={[-8.5, 6.1 ,15.0]} rotation={[0,1*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[13,12]}/>
+        <planeGeometry attach="geometry" args ={[13,12]}/>
         <meshLambertMaterial attach="material" map={textureWall1} color={"aqua"} />
       </mesh>
 
       <mesh position={[-15, 6.1, 7.3]} rotation={[0,-1.5*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[17,12]}/>
+        <planeGeometry attach="geometry" args ={[17,12]}/>
         <meshLambertMaterial attach="material" map={textureWall1} color="aqua" />
       </mesh>
 
@@ -247,19 +246,6 @@ export default function MyRoomSection(){
            GitHub
           <meshLambertMaterial map={metalTexture4} color={hoveredGitHub ? 0x6B728E : "black"} />
       </Text3D>
-
-
-
-
-
-
-
-
-
-
-
-
-
         </>
     )
 }

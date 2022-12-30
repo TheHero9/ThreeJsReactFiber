@@ -1,5 +1,5 @@
 import {RoundedBox, Text3D} from "@react-three/drei";
-import { useFrame, useLoader} from '@react-three/fiber'
+import { useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect } from "react";
 import { useState } from "react";
@@ -56,7 +56,7 @@ export default function WaitingSection(){
 
         {/* Map */}
         <mesh position={[1.6, 8.5, 14.7]} rotation={[0,-1*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[4.6, 4.1]}/>
+        <planeGeometry attach="geometry" args ={[4.6, 4.1]}/>
         <meshLambertMaterial attach="material" map={textureMap}/>
       </mesh>
 
@@ -68,7 +68,7 @@ export default function WaitingSection(){
 
         {/* Picture Positano */}
         <mesh position={[14.7,7,6]} rotation={[0,1.5*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[7,4]}/>
+        <planeGeometry attach="geometry" args ={[7,4]}/>
         <meshLambertMaterial attach="material" map={positanoTexture}/>
       </mesh>
 
@@ -77,12 +77,12 @@ export default function WaitingSection(){
 
         {/* Walls */}
     <mesh position={[6.5 , 6.1, 15]} rotation={[0,1*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[17,12]}/>
+        <planeGeometry attach="geometry" args ={[17,12]}/>
         <meshLambertMaterial attach="material" map={walltexture2} color={"aqua"} />
       </mesh>
 
       <mesh position={[15, 6.1, 7]} rotation={[0,1.5*Math.PI,0]} >
-        <planeBufferGeometry attach="geometry" args ={[16,12]}/>
+        <planeGeometry attach="geometry" args ={[16,12]}/>
         <meshLambertMaterial attach="material" map={walltexture2} color={0x7DE5ED} />
       </mesh>
 
