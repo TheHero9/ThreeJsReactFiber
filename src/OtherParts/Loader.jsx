@@ -19,7 +19,8 @@ export default function Loader(){
     </div>
 
     <div className={'divTip'}>
-        <h3>Tip: Don't switch sections too fast, it may cause lag.</h3>
+        <h3>Tip: 1.Your phone may be too weak to load the server, use a PC or tablet.</h3> <br></br>
+        <h3>2. Don't switch sections too fast, it may cause lag.</h3>
     </div>
     </Html>
 }
