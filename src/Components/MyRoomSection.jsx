@@ -6,16 +6,15 @@ import * as THREE from "three"
 import { TextureLoader } from 'three';
 
 //Photo
-import wall from "/src/Photos/wallTexture.jpg"
-import desktopPhoto from "/src/Photos/githubProfile.jpg"
-import metalText from "/src/Photos/metalText.jpg"
-
+import wall from "/assets/Photos/wallTexture.jpg"
+import desktopPhoto from "/assets/Photos/githubProfile.jpg"
+import metalText from "/assets/Photos/metalText.jpg"
 import roboto from '/Roboto Light_Regular.json'
 
 export default function MyRoomSection(){
 
     let wooden_shelf= useLoader(
-        GLTFLoader, "/woodenshelfscene.glb"
+        GLTFLoader, "Imports/woodenshelfscene.glb"
     )
 
     const [shelf1, shelfGeometry1] = useState()
@@ -35,35 +34,35 @@ export default function MyRoomSection(){
 
 
     let computer_desk= useLoader(
-        GLTFLoader, "/deskscene.glb"
+        GLTFLoader, "Imports/deskscene.glb"
       ).scene
 
     let tiles= useLoader(
-        GLTFLoader, "/tilesscene.glb"
+        GLTFLoader, "Imports/tilesscene.glb"
     ).scene
 
     let laptop= useLoader(
-        GLTFLoader, "/laptopscene.glb"
+        GLTFLoader, "Imports/laptopscene.glb"
     ).scene
 
     let mousepad= useLoader(
-        GLTFLoader, "/mousepadscene.glb"
+        GLTFLoader, "Imports/mousepadscene.glb"
     ).scene
 
     let office_chair= useLoader(
-        GLTFLoader, "/chairscene.glb"
+        GLTFLoader, "Imports/chairscene.glb"
     ).scene
 
     let shelf= useLoader(
-        GLTFLoader, "/shelfscene.glb"
+        GLTFLoader, "Imports/shelfscene.glb"
     ).scene
 
     let pillar = useLoader(
-      GLTFLoader, "/pillarscene.glb"
+      GLTFLoader, "Imports/pillarscene.glb"
     )
 
     let projector= useLoader(
-      GLTFLoader, "/projectorscene.glb"
+      GLTFLoader, "Imports/projectorscene.glb"
     )
     
     //Pillar and projector

@@ -6,33 +6,33 @@ import { useState } from "react";
 import { TextureLoader } from "three";
 
 import roboto from '/Roboto Light_Regular.json'
-import marioback3 from "/src/Photos/marioback3.jpg"
-import marioback from "/src/Photos/marioback.jpg"
+import marioback3 from "/assets/Photos/marioback3.jpg"
+import marioback from "/assets/Photos/marioback.jpg"
 
 
 export default function EducationSection(){
       let lake= useLoader(
-        GLTFLoader, "/lakescene.glb"
+        GLTFLoader, "Imports/lakescene.glb"
       ).scene
 
       let mysteryBox = useLoader(
-        GLTFLoader, "/mysteryscene.glb"
+        GLTFLoader, "Imports/mysteryscene.glb"
       ).scene
 
       let piranhas = useLoader(
-        GLTFLoader, "/piranhascene.glb"
+        GLTFLoader, "Imports/piranhascene.glb"
       ).scene
 
       let mario = useLoader(
-        GLTFLoader, "/marioscene.glb"
+        GLTFLoader, "Imports/marioscene.glb"
       ).scene
     
       let pillar = useLoader(
-        GLTFLoader, "/pillarscene.glb"
+        GLTFLoader, "Imports/pillarscene.glb"
       )
 
       let projector= useLoader(
-        GLTFLoader, "/projectorscene.glb"
+        GLTFLoader, "Imports/projectorscene.glb"
       )
     
       const backTexture = useLoader(TextureLoader, marioback)
@@ -63,7 +63,6 @@ export default function EducationSection(){
 
       useFrame(()=> {
         projectorGeo2.rotation.y += 0.02   
-
         mysteryBox.rotation.y += 0.0019
 
       })

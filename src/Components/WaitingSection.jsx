@@ -1,32 +1,31 @@
 import {RoundedBox, Text3D} from "@react-three/drei";
 import { useLoader} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TextureLoader } from 'three';
 
-import mapImage from "/src/Photos/mapImage.jpg"
+import mapImage from "/assets/Photos/mapImage.jpg"
 import roboto from '/Roboto Light_Regular.json'
-import walltexture from '/src/Photos/wallTextureWaiting.jpg'
-import metal from "/src/Photos/metal.jpg"
-import wood from "/src/Photos/wood.jpg"
-import positano from "/src/Photos/positano.jpg"
+import walltexture from '/assets/Photos/wallTextureWaiting.jpg'
+import metal from "/assets/Photos/metal.jpg"
+import wood from "/assets/Photos/wood.jpg"
+import positano from "/assets/Photos/positano.jpg"
 
 export default function WaitingSection(){
     let frame= useLoader(
-        GLTFLoader, "/framescene.glb"
+        GLTFLoader, "Imports/framescene.glb"
       ).scene
 
     let plant= useLoader(
-        GLTFLoader, "/plantscene.glb"
+        GLTFLoader, "Imports/plantscene.glb"
       ).scene
 
       let sofa= useLoader(
-        GLTFLoader, "/modernsofascene.glb"
+        GLTFLoader, "Imports/modernsofascene.glb"
       ).scene
 
       let pictureframe = useLoader(
-        GLTFLoader, "/pictureframescene.glb"
+        GLTFLoader, "Imports/pictureframescene.glb"
       ).scene
 
       const textureMap = useLoader(TextureLoader, mapImage)
@@ -103,23 +102,10 @@ export default function WaitingSection(){
       </RoundedBox>
 
             <Text3D
-            font={roboto} size={clicked ? 0.0 : 0.7} position={[14.4, 9.15 , 14.8]} castShadow="true" rotation={[0, 1*Math.PI, 0]} height={0.15} >
-            Welcome to my world!
+            font={roboto} size={clicked ? 0.0 : 0.7} position={[14.2, 9.55 , 14.8]} castShadow="true" rotation={[0, 1*Math.PI, 0]} height={0.15} >
+            {"Welcome to my world! \nClick on each of the \nprojectors to find out \nmore about me."}
                 <meshLambertMaterial map={woodTexture} />
             </Text3D>
-
-            <Text3D
-            font={roboto} size={clicked ? 0.0 : 0.5} position={[14.2, 7.85 , 14.8]} castShadow="true"  rotation={[0, 1*Math.PI, 0]} height={0.15} >
-            Click on each of the projectors
-                <meshLambertMaterial map={woodTexture} />
-            </Text3D>
-
-            <Text3D
-            font={roboto} size={clicked ? 0.0 : 0.5} position={[13.4, 6.65 , 14.8]} castShadow="true"  rotation={[0, 1*Math.PI, 0]} height={0.15} >
-            to find out more about me.
-                <meshLambertMaterial map={woodTexture} />
-            </Text3D>
-        
         </>
     )
 }

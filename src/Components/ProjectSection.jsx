@@ -5,43 +5,43 @@ import { useEffect, useState } from "react";
 import { TextureLoader } from "three";
 
 import roboto from '/Roboto Light_Regular.json'
-import plains from "/src/Photos/PlainsBiome.jpg"
-import plains2 from "/src/Photos/plains2.jpg"
+import plains from "/assets/Photos/PlainsBiome.jpg"
+import plains2 from "/assets/Photos/plains2.jpg"
 
 export default function ProjectsSection(){
       let tree= useLoader(
-        GLTFLoader, "/treescene.glb"
+        GLTFLoader, "Imports/treescene.glb"
       ).scene
 
       let signs= useLoader(
-        GLTFLoader, "/signsscene.glb"
+        GLTFLoader, "Imports/signsscene.glb"
       ).scene
 
        let grass= useLoader(
-        GLTFLoader, "/grassgroundscene.glb"
+        GLTFLoader, "Imports/grassgroundscene.glb"
        ).scene
 
        let pillar = useLoader(
-        GLTFLoader, "/pillarscene.glb"
+        GLTFLoader, "Imports/pillarscene.glb"
       )
       let rock= useLoader(
-        GLTFLoader, "/rockscene.glb"
+        GLTFLoader, "Imports/rockscene.glb"
       ).scene
 
       let rock2= useLoader(
-        GLTFLoader, "/bigrockscene.glb"
+        GLTFLoader, "Imports/bigrockscene.glb"
       ).scene
 
       let slide= useLoader(
-        GLTFLoader, "/slidescene.glb"
+        GLTFLoader, "Imports/slidescene.glb"
       ).scene
       
       let shiba= useLoader(
-        GLTFLoader, "/shibadogscene.glb"
+        GLTFLoader, "Imports/shibadogscene.glb"
       ).scene
 
       let projector= useLoader(
-        GLTFLoader, "/projectorscene.glb"
+        GLTFLoader, "Imports/projectorscene.glb"
       )
       
         

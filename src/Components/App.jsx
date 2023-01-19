@@ -5,16 +5,16 @@ import {OrbitControls, Stars} from '@react-three/drei';
 import { useControls, button } from 'leva'
 import { Vector3 } from 'three'
 
-import './App.css'
+import '../Css/App.css'
 
 //Import components
-import Roads from '/src/OtherParts/Roads';
-import Loader from '/src/OtherParts/Loader';
-import annotations from './annotations.json'
-import ExperienceSection from "/src/ExperienceSection.jsx"
-import ProjectSection from '/src/ProjectSection.jsx';
-import MyRoomSection from '/src/MyRoomSection.jsx';
-import WaitingSection from '/src/WaitingSection';
+import Roads from '/src/Components/Roads';
+import Loader from '/src/Components/Loader';
+import annotations from '/annotations.json'
+import ExperienceSection from "/src/Components/ExperienceSection.jsx"
+import ProjectSection from '/src/Components/ProjectSection.jsx';
+import MyRoomSection from '/src/Components/MyRoomSection.jsx';
+import WaitingSection from '/src/Components/WaitingSection';
 
 function Arena({ controls, lerping, setLerping }) {
   const [to, setTo] = useState(new Vector3(0, 50, 10))
@@ -65,7 +65,7 @@ function App() {
 
         <Roads/>
         <ambientLight/>
-        <Stars/>
+        {/* <Stars/> */}
         
         <OrbitControls target={[9,5,15]} ref={ref} />
         <Arena controls={ref} lerping={lerping} setLerping={setLerping} />
