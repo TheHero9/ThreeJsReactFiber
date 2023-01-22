@@ -18,19 +18,12 @@ export default function ProjectsSection(){
       ).scene
 
        let grass= useLoader(
-        GLTFLoader, "Imports/grassgroundscene.glb"
+        GLTFLoader, "Imports/grassgroundscene2.glb"
        ).scene
 
        let pillar = useLoader(
         GLTFLoader, "Imports/pillarscene.glb"
       )
-      let rock= useLoader(
-        GLTFLoader, "Imports/rockscene.glb"
-      ).scene
-
-      let rock2= useLoader(
-        GLTFLoader, "Imports/bigrockscene.glb"
-      ).scene
 
       let slide= useLoader(
         GLTFLoader, "Imports/slidescene.glb"
@@ -79,14 +72,14 @@ export default function ProjectsSection(){
 
       useEffect(() => {
         pillarGeo.scale.set(0.003, 0.003, 0.003);
-        rock2.scale.set(0.0045, 0.0045, 0.0045)
-        rock.scale.set(5,5,5)
+
+        shiba.scale.set(1.5, 1.5, 1.5)
 
         signs.scale.set(1.4,1.4,1.4)
 
         slide.scale.set(0.6,0.6,0.6)
 
-        grass.scale.set(0.22, 0.09, 0.177)
+        grass.scale.set(4.2, 3, 3.5)
 
         document.body.style.cursor = hovered ? "pointer" : "auto"
       }, [hovered]);
@@ -100,17 +93,11 @@ export default function ProjectsSection(){
       {/* Pillar */}
       <primitive object={pillarGeo} rotation={[0,0.3,0]} position={[-7.06,0.2,-6.9]} />
 
-      {/* Rock */}
-      <primitive object={rock} position={[-9.5,0.3,-4]} />
-
-      {/* Rock Big*/}
-      <primitive object={rock2} rotation={[0,9.8,0]} position={[-12.9,0.2,-13]} />
-
       {/* Pine tree */}
-      <primitive object={tree} rotation={[0,7,0]} position={[-7.1,-0.19,-11]} />
+      <primitive object={tree} rotation={[0,7,0]} position={[-9.1,-0.3,-12]} />
 
       {/* Grass */}
-      <primitive object={grass} rotation={[0,0,0]} position={[-3.4,0.1,-4.6]} />
+      <primitive object={grass} rotation={[0,0,0]} position={[-7, 0.09 ,-8.1]} />
 
       {/* Slide */}
       <primitive object={slide} rotation={[0,2,0]} position={[-3.9,-0.05,-12]} />
@@ -127,7 +114,7 @@ export default function ProjectsSection(){
         setHovered(false)
       }}
       
-      object={shiba} rotation={[0.3,0,0]} position={[-9.5,2.3,-3.2]} />
+      object={shiba} rotation={[0,0.5,0]} position={[-8.5, 1.6,-4.2]} />
 
       {/* Signs */}
       <primitive object={signs} rotation={[0,0.3,0]} position={[-3,0,-7]} />

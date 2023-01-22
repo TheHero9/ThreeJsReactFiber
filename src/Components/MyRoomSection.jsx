@@ -38,7 +38,7 @@ export default function MyRoomSection(){
       ).scene
 
     let tiles= useLoader(
-        GLTFLoader, "Imports/tilesscene.glb"
+        GLTFLoader, "Imports/wooden_floor.glb"
     ).scene
 
     let laptop= useLoader(
@@ -112,7 +112,8 @@ export default function MyRoomSection(){
         laptop.scale.set(0.10, 0.10, 0.10)
         mousepad.scale.set(1.3, 1.1, 1.3)
         office_chair.scale.set(0.06, 0.06, 0.06)
-        tiles.scale.set(0.1, 0.05, 0.032)
+
+        tiles.scale.set(0.117, 0.05, 0.037)
         shelf.scale.set(5, 5, 5)
 
         shelf1.scale.set(3, 3, 3)
@@ -153,7 +154,7 @@ export default function MyRoomSection(){
     <primitive object={shelf3} rotation={[0, -1*Math.PI, 0]} position={[-11.1, 10.3, 14.25]} />
 
     {/*Tiles*/}
-    <primitive object={tiles} rotation={[0, -1*Math.PI, 0]} position={[-10, 0.3, 10.2]} />
+    <primitive object={tiles} rotation={[0, -1*Math.PI, 0]} position={[-0.01, 0.3, 10.2]} />
 
     
     {/*Pillar*/}

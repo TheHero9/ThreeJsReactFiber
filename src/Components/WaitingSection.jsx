@@ -21,7 +21,7 @@ export default function WaitingSection(){
       ).scene
 
       let sofa= useLoader(
-        GLTFLoader, "Imports/modernsofascene.glb"
+        GLTFLoader, "Imports/modernsofa2.glb"
       ).scene
 
       let pictureframe = useLoader(

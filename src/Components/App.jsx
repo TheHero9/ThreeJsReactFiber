@@ -58,8 +58,8 @@ function App() {
       <Suspense fallback={<Loader/>}> 
           
         <ExperienceSection/> 
-        {/* <ProjectSection/> */}
-      <MyRoomSection/> 
+        <ProjectSection/>
+        <MyRoomSection/> 
         <WaitingSection/>
 
 
