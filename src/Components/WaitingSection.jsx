@@ -11,6 +11,8 @@ import metal from "/assets/Photos/metal.jpg"
 import wood from "/assets/Photos/wood.jpg"
 import positano from "/assets/Photos/positano.jpg"
 
+
+
 export default function WaitingSection(){
     let frame= useLoader(
         GLTFLoader, "Imports/framescene.glb"

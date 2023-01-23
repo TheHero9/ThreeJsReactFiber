@@ -59,3 +59,10 @@ h3{
 .loader{
   margin:auto;
 }
+
+
+
+div .test-div {
+  background-color: red  !important;
+  max-width: 70%;
+}

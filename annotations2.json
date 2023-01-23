@@ -2,12 +2,12 @@
     {
       "title": "⌛ Waiting Room",
       "position": {
-        "x": 7,
+        "x": 6,
         "y": 8,
-        "z": -4
+        "z": -6
       },
       "lookAt": {
-        "x": 9,
+        "x": 6.7,
         "y": 6,
         "z": 10
       }
