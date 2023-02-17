@@ -25,13 +25,14 @@ html, body, #root {
 
 
 .loader-text{
-  margin: auto;
-  background-color: rgb(38, 41, 230);
-  border-radius: 30px;
-  width:60%;
-  color: black;
+  margin: 0;
+  /* background-color: rgb(38, 41, 230); */
+  border-radius: 0px;
+  width:100%;
+  color: rgb(38, 41, 230);
   position: relative;
   text-align: center;
+  text-shadow: 2px -1px 10px rgba(255, 255, 255, 0.24);;
 }
 
 
@@ -43,6 +44,7 @@ html, body, #root {
 
 .divText{
   margin: 40px;
+  
 }
 
 .divLoader{
@@ -54,6 +56,7 @@ html, body, #root {
 h3{
   color: rgb(38, 41, 230);
   text-align:  center;
+  text-shadow: 2px -1px 10px rgba(255, 255, 255, 0.24);;
 }
 
 .loader{
